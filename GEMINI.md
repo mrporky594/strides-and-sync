@@ -58,4 +58,3 @@ Results are tabulated weekly and submitted to the committee. Data is stored in m
 - **September:** Week 36, 37, 38, 39
 - **October:** Week 40, 41, 42, 43, 44
 - **November:** Week 45, 46, 47, 48
-
