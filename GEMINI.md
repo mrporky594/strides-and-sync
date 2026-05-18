@@ -5,31 +5,26 @@ This project tracks exercise sessions (Running, Jogging, Cycling, and Steps) and
 
 **Data Source:** [Google Sheets - Strides in Sync 2026 (Responses)](https://docs.google.com/spreadsheets/d/1NdwkcROXpgWg9hJAPNd1qC6SeGnexH63Y9Qa9KkjkLc/edit?usp=sharing)
 
-## Data Processing Rules
-1.  **Scope of Points:**
-    *   Points should only be counted from **Week 21 onwards**.
-    *   Entries prior to Week 21 should be recorded for tracking but assigned 0 points for the official tally.
-2.  **Classification Logic:**
-    *   **Run/Jog:** Must be **> 2.0 km** AND **faster than 6.0 km/h**.
-    *   **Steps:** If the above criteria are not met, the entry is counted as Steps.
-2.  **Unit Conversions:**
-    *   1 Mile = 1.60934 Kilometers.
-    *   Pace (min/mi) to Speed (km/h): `(60 / pace_in_miles) * 1.60934`.
-3.  **Visual Extraction Guidelines:**
+## Data Processing & Update Workflow
+1.  **Routine Data Extraction (The "Sweet Spot"):**
+    *   For weekly updates, use `firecrawl_scrape` with `formats: ["json"]` to fetch data from Google Sheets.
+    *   **Prompt:** "Extract the rows from the 'Form Responses 1' tab. Each row must include Timestamp, Profile, and Image Link."
+    *   **Rationale:** This provides browser-rendered reliability at a low credit cost (5 credits), avoiding the high expenditure of the `firecrawl_agent`.
+2.  **Escalation Protocol (If Scrape Fails):**
+    *   Only use `firecrawl_agent` if `firecrawl_scrape` returns empty results or if you suspect data exists on other tabs not captured by the initial scrape.
+    *   Always check the `scrapeId` metadata to ensure the status code is 200.
+
+3.  **Visual Extraction & OCR:**
     *   Always verify the **Total Duration** against the **Distance** and **Pace** to prevent OCR hallucinations.
     *   Look for a '1' preceding the decimal (e.g., distinguishing between 1.49 and 15.01).
     *   Check for 'mi' vs 'km' labels explicitly.
-4.  **Verification Protocol (Borderline Flagging):**
-    *   Flag any entry for **Human Verification** if the distance is within **5%** of a higher Tier threshold.
-    *   *Example:* A run of 3.4 km is within 5% of the 3.5 km Tier 1 threshold and must be flagged.
-    *   If a user provides a manual correction, the manual value takes precedence over the OCR data.
 
-5.  **Image Fetch Failure Workflow:**
-    *   If `web_fetch` fails to extract data from a Google Drive/Image link, download the image locally using `Invoke-WebRequest`.
-    *   Process the local image using `read_file` for OCR and data extraction.
+4.  **Image Fetch Failure Workflow:**
+    *   If `firecrawl_scrape` fails on a Google Drive link (e.g., 403 Forbidden), download the image locally using `run_shell_command` with `Invoke-WebRequest`.
+    *   Process the local image using `firecrawl_parse` for OCR.
     *   **Mandatory Cleanup:** Delete the local image file immediately after the report is updated.
 
-## Points Tier System
+## Verification Protocol (Borderline Flagging)
 | Tier | Steps | Run/Jog (km) | Cycling (km) | Points |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | 45,000 | 3.5 | 10 | 1 |
