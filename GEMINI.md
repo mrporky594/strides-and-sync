@@ -53,9 +53,9 @@ This project tracks exercise sessions (Running, Jogging, Cycling, and Steps) and
 
 ## Standard Reporting Format
 Weekly reports must use the following table structure:
-| Date/Timestamp | Profile | Category | Distance (km) | Points | App | Image Link | Status |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| YYYY-MM-DD HH:MM | Name | Category | 0.00 | 0 | App Name | [Link] | Verified/Flagged/Approval Required |
+| Date/Timestamp | Profile | Category | Distance (km) | Steps | Points | App | Image Link | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| YYYY-MM-DD HH:MM | Name | Category | 0.00 | 0 | 0 | App Name | [Link] | Verified/Flagged/Approval Required |
 
 ## Reporting & Submission Schedule
 Results are tabulated weekly and submitted to the committee. Data is stored in monthly folders (`./Reports/YYYY-MM/`) with weekly markdown files.
