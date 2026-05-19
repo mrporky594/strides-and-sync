@@ -47,6 +47,10 @@ This project tracks exercise sessions (Running, Jogging, Cycling, and Steps) and
 
 *Note: Run/Jog requires a minimum pace of 6 km/h to qualify for these tiers.*
 
+### Team Ranking Rules
+*   **Weekly Ranking:** Team weekly ranking is based on the **average points** of team members.
+*   **Rounding:** Average points are rounded to **2 decimal places**.
+
 ## Standard Reporting Format
 Weekly reports must use the following table structure:
 | Date/Timestamp | Profile | Category | Distance (km) | Points | App | Image Link | Status |
