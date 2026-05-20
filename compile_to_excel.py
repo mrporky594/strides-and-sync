@@ -34,44 +34,51 @@ def create_summary_sheet(wb, headers, rows):
     # Identify indices
     cat_idx = -1
     dist_idx = -1
+    steps_idx = -1
     points_idx = -1
     for i, h in enumerate(headers):
         if 'Category' in h: cat_idx = i
         if 'Distance' in h: dist_idx = i
+        if 'Steps' in h: steps_idx = i
         if 'Points' in h: points_idx = i
     
     tallies = {
-        'Run/Jog': {'Distance': 0.0, 'Points': 0},
-        'Cycling': {'Distance': 0.0, 'Points': 0},
-        'Steps': {'Distance': 0.0, 'Points': 0}
+        'Run/Jog': {'Distance': 0.0, 'Steps': 0, 'Points': 0},
+        'Cycling': {'Distance': 0.0, 'Steps': 0, 'Points': 0},
+        'Steps': {'Distance': 0.0, 'Steps': 0, 'Points': 0}
     }
     
     for row in rows:
         cat = row[cat_idx] if cat_idx != -1 else 'Other'
         try:
-            dist = float(row[dist_idx]) if dist_idx != -1 else 0.0
-            pts = int(row[points_idx]) if points_idx != -1 else 0
+            dist = float(row[dist_idx].replace(',', '')) if dist_idx != -1 and row[dist_idx] else 0.0
+            steps = int(row[steps_idx].replace(',', '')) if steps_idx != -1 and row[steps_idx] else 0
+            pts = int(row[points_idx].replace(',', '')) if points_idx != -1 and row[points_idx] else 0
         except:
-            dist, pts = 0.0, 0
+            dist, steps, pts = 0.0, 0, 0
             
         if cat in tallies:
             tallies[cat]['Distance'] += dist
+            tallies[cat]['Steps'] += steps
             tallies[cat]['Points'] += pts
         else:
-            if 'Other' not in tallies: tallies['Other'] = {'Distance': 0.0, 'Points': 0}
+            if 'Other' not in tallies: tallies['Other'] = {'Distance': 0.0, 'Steps': 0, 'Points': 0}
             tallies['Other']['Distance'] += dist
+            tallies['Other']['Steps'] += steps
             tallies['Other']['Points'] += pts
 
-    ws.append(['Category', 'Total Distance (km)', 'Total Points'])
+    ws.append(['Category', 'Total Distance (km)', 'Total Steps', 'Total Points'])
     total_dist = 0
+    total_steps = 0
     total_pts = 0
     for cat, data in tallies.items():
-        ws.append([cat, round(data['Distance'], 2), data['Points']])
+        ws.append([cat, round(data['Distance'], 2), data['Steps'], data['Points']])
         total_dist += data['Distance']
+        total_steps += data['Steps']
         total_pts += data['Points']
     
-    ws.append(['---', '---', '---'])
-    ws.append(['GRAND TOTAL', round(total_dist, 2), total_pts])
+    ws.append(['---', '---', '---', '---'])
+    ws.append(['GRAND TOTAL', round(total_dist, 2), total_steps, total_pts])
 
 def compile_reports(reports_dir, output_file, members_dir):
     all_headers = []
@@ -119,22 +126,28 @@ def compile_reports(reports_dir, output_file, members_dir):
         wb_member.save(os.path.join(members_dir, f"{name}_Activity_Report.xlsx"))
         
         # Collect for global summary
-        t = {'Run/Jog': 0, 'Cycling': 0, 'Steps': 0, 'TotalPoints': 0}
+        t = {'Run/Jog': 0, 'Cycling': 0, 'Steps': 0, 'TotalSteps': 0, 'TotalPoints': 0}
         cat_idx = next((i for i, h in enumerate(all_headers) if 'Category' in h), -1)
+        steps_idx = next((i for i, h in enumerate(all_headers) if 'Steps' in h), -1)
         pts_idx = next((i for i, h in enumerate(all_headers) if 'Points' in h), -1)
         for r in rows:
             cat = r[cat_idx] if cat_idx != -1 else ''
-            pts = int(r[pts_idx]) if pts_idx != -1 else 0
+            try:
+                steps = int(r[steps_idx].replace(',', '')) if steps_idx != -1 and r[steps_idx] else 0
+                pts = int(r[pts_idx].replace(',', '')) if pts_idx != -1 and r[pts_idx] else 0
+            except:
+                steps, pts = 0, 0
             if cat in t: t[cat] += pts
+            t['TotalSteps'] += steps
             t['TotalPoints'] += pts
-        summary_data.append([name, t['Run/Jog'], t['Cycling'], t['Steps'], t['TotalPoints']])
+        summary_data.append([name, t['Run/Jog'], t['Cycling'], t['Steps'], t['TotalSteps'], t['TotalPoints']])
 
     # Global Summary Report
     wb_sum = Workbook()
     ws_sum = wb_sum.active
     ws_sum.title = "Leaderboard"
-    ws_sum.append(['Member', 'Run/Jog Points', 'Cycling Points', 'Steps Points', 'Cumulative Total'])
-    for entry in sorted(summary_data, key=lambda x: x[4], reverse=True):
+    ws_sum.append(['Member', 'Run/Jog Points', 'Cycling Points', 'Steps Points', 'Cumulative Steps', 'Cumulative Points'])
+    for entry in sorted(summary_data, key=lambda x: x[5], reverse=True):
         ws_sum.append(entry)
     wb_sum.save("Strides_in_Sync_2026_Tally.xlsx")
     print("All reports and tallies generated successfully.")

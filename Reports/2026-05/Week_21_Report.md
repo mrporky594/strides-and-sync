@@ -10,9 +10,12 @@
 | 2026-05-18 20:08:08 | CRX | Run/Jog | 4.14 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1TibJ0nCXi3MdapXCHgZ7vlZFCc-l92EJ) | Verified |
 | 2026-05-19 06:24:14 | Kai Fong | Steps | 1.40 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=16hBP3JG1B-5EnbygHX8WLWBVnw-xU6ac) | Verified |
 | 2026-05-19 11:51:47 | Surya | Steps | 0.00 | 105,386 | 5 | Garmin | [View](https://drive.google.com/open?id=12CPDYeDhyHewlJSUZkkEJQ-S7x_D4ZKf) | Verified |
+| 2026-05-19 17:28:49 | Jeremy | Run/Jog | 3.97 | 0 | 1 | Google Fit | [View](https://drive.google.com/open?id=1Oob2SfqIDH56PfcUnosLUlwIAh7thMWo) | Verified |
+| 2026-05-20 16:07:38 | Jeremy | Run/Jog | 3.86 | 0 | 1 | Google Fit | [View](https://drive.google.com/open?id=1l7eFtpD9K88Fec-3SVOtV0p7Kjk0kRwV) | Verified |
+| 2026-05-20 18:54:02 | Kai Fong | Run/Jog | 6.03 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1S9pru_RKImD97SydnUeUqabtzSQaUVDt) | Verified |
 
 ---
-**Total Points Accumulated:** 10
+**Total Points Accumulated:** 13
 
 **Notes:**
 - **Jeremy (18:05:56):** 2.2 miles converted to 3.54 km. Pace 10:45/mi converted to 8.98 km/h. Qualifies for Tier 1 (3.5 km). Flagged: within 5% of Tier 1 threshold (3.54 km vs 3.5 km). App identified: Google Fit (Approved).
@@ -21,3 +24,7 @@
 - **CRX (20:08:08):** OCR extraction: 4.14 km Run (11.36 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
 - **Kai Fong (06:24:14):** OCR extraction: 1.40 km Walk. Below 2.0 km threshold; classified as Steps. 0 points assigned. App identified: Strava (Approved).
 - **Surya (11:51:47):** OCR extraction: 105,386 steps. Assigned **5 points** (Tier 5) as per user directive. App identified: Garmin (Approved).
+- **Jeremy (17:28:49):** 2.47 miles converted to 3.97 km. Pace 12:40/mi converted to 7.62 km/h. Qualifies for Tier 1 (3.5 km). App identified: Google Fit (Approved).
+- **Jeremy (16:07:38):** 2.4 miles converted to 3.86 km. Pace 11:35/mi converted to 8.34 km/h. Qualifies for Tier 1 (3.5 km). App identified: Google Fit (Approved).
+- **Kai Fong (18:54:02):** OCR extraction: 6.03 km Run (9.57 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
+
