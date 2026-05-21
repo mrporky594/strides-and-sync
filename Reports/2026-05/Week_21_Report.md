@@ -15,6 +15,7 @@
 | 2026-05-20 18:54:02 | Kai Fong | Run/Jog | 6.03 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1S9pru_RKImD97SydnUeUqabtzSQaUVDt) | Verified |
 | 5/20/2026 19:07:24 | Kelvin | Run/Jog | 5.31 | 0 | 1 | Garmin | [View](https://drive.google.com/open?id=1TVXz0ghPa7v7OqhgKEcln7jTjxA6gNcj) | Verified |
 | 5/20/2026 19:19:30 | Kelvin | Steps | 3.02 | 0 | 0 | Garmin | [View](https://drive.google.com/open?id=1ZAz2eh8U6T6N6Bo44jyBXqOI7j585q5i) | Verified |
+| 5/21/2026 18:56:16 | Jeremy | Run/Jog | 2.88 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=11bg7SX_CX_UEvAn_5dxX3Qr5R3ZlhWJZ) | Verified |
 
 ---
 **Total Points Accumulated:** 14
@@ -31,3 +32,4 @@
 - **Kai Fong (18:54:02):** OCR extraction: 6.03 km Run (9.57 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
 - **Kelvin (19:07:24):** OCR extraction: 5.31 km Run (10.14 km/h). Qualifies for Tier 1 (3.5 km). App identified: Garmin (Approved).
 - **Kelvin (19:19:30):** OCR extraction: 3.02 km Run (0.00 km/h). Below Tier 1 threshold or pace below 6 km/h. App identified: Garmin (Approved).
+- **Jeremy (18:56:16):** 1.79 miles converted to 2.88 km. Pace 11:07/mi converted to 8.69 km/h. Below Tier 1 threshold or pace below 6 km/h. App identified: Strava (Approved).
