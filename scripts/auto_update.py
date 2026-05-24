@@ -321,6 +321,34 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
     
     new_content.append("\n---")
     new_content.append(f"**Total Points Accumulated:** {total_points}\n")
+
+    # Cumulative Summary Table
+    MEMBER_ORDER = ['CRX', 'Jeremy', 'Kai Fong', 'Chee', 'Surya', 'Kelvin', 'Ron', 'Chun Chieh']
+    member_cum = {m: {'steps': 0, 'run_dist': 0.0, 'cycle_dist': 0.0,
+                      'steps_pts': 0, 'run_pts': 0, 'cycle_pts': 0} for m in MEMBER_ORDER}
+    for r in existing_rows:
+        name = r["profile"]
+        if name not in member_cum:
+            member_cum[name] = {'steps': 0, 'run_dist': 0.0, 'cycle_dist': 0.0,
+                                'steps_pts': 0, 'run_pts': 0, 'cycle_pts': 0}
+        if r["category"] == "Steps":
+            member_cum[name]['steps'] += r["steps"]
+            member_cum[name]['steps_pts'] += r["points"]
+        elif r["category"] == "Run/Jog":
+            member_cum[name]['run_dist'] += r["distance_km"]
+            member_cum[name]['run_pts'] += r["points"]
+        elif r["category"] == "Cycling":
+            member_cum[name]['cycle_dist'] += r["distance_km"]
+            member_cum[name]['cycle_pts'] += r["points"]
+
+    new_content.append("## Weekly Cumulative Summary\n")
+    new_content.append("| Member | Total Steps | Total Distance (Jogging/Running (Km)) | Total Distance (Cycling (Km)) | Steps Points | Run/Jog Points | Cycling Points |")
+    new_content.append("| :--- | :--- | :--- | :--- | :--- | :--- | :--- |")
+    for name in MEMBER_ORDER:
+        d = member_cum[name]
+        new_content.append(f"| {name} | {d['steps']:,} | {d['run_dist']:.2f} | {d['cycle_dist']:.2f} | {d['steps_pts']} | {d['run_pts']} | {d['cycle_pts']} |")
+
+    new_content.append("\n---\n")
     new_content.append("**Notes:**")
     for n in existing_notes:
         new_content.append(n)

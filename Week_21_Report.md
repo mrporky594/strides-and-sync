@@ -23,6 +23,21 @@
 ---
 **Total Points Accumulated:** 18
 
+## Weekly Cumulative Summary
+
+| Member | Total Steps | Total Distance (Jogging/Running (Km)) | Total Distance (Cycling (Km)) | Steps Points | Run/Jog Points | Cycling Points |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| CRX | 0 | 4.14 | 0.00 | 0 | 1 | 0 |
+| Jeremy | 0 | 14.25 | 0.00 | 0 | 3 | 0 |
+| Kai Fong | 0 | 15.79 | 0.00 | 0 | 3 | 0 |
+| Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 |
+| Surya | 105,386 | 0.00 | 0.00 | 5 | 0 | 0 |
+| Kelvin | 0 | 12.63 | 0.00 | 0 | 3 | 0 |
+| Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 |
+| Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 |
+
+---
+
 **Notes:**
 - **Jeremy (18:05:56):** 2.2 miles converted to 3.54 km. Pace 10:45/mi converted to 8.98 km/h. Qualifies for Tier 1 (3.5 km). Flagged: within 5% of Tier 1 threshold (3.54 km vs 3.5 km). App identified: Google Fit (Approved).
 - **Kelvin (18:45:40):** OCR extraction: 7.32 km Run (9.92 km/h). Qualifies for Tier 2 (7 km). Flagged: within 5% of Tier 2 threshold (7.32 km vs 7.0 km). App identified: Strava (Approved).

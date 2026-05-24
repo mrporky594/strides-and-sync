@@ -87,14 +87,32 @@ def compile_reports(reports_dir, output_file, members_dir):
     if not os.path.exists(members_dir):
         os.makedirs(members_dir)
     
+    # Collect all report data, using the widest header set
+    report_data = []
     for root, dirs, files in os.walk(reports_dir):
         if members_dir in root: continue
         for file in files:
             if file.endswith('.md') and 'Week' in file:
                 headers, rows = extract_table_from_md(os.path.join(root, file))
                 if headers and rows:
-                    if not all_headers: all_headers = headers
-                    all_rows.extend(rows)
+                    report_data.append((headers, rows))
+                    if not all_headers or len(headers) > len(all_headers):
+                        all_headers = headers
+    
+    # Normalize rows to match all_headers
+    for headers, rows in report_data:
+        if headers == all_headers:
+            all_rows.extend(rows)
+        else:
+            col_map = {h: i for i, h in enumerate(headers)}
+            for row in rows:
+                new_row = []
+                for h in all_headers:
+                    if h in col_map and col_map[h] < len(row):
+                        new_row.append(row[col_map[h]])
+                    else:
+                        new_row.append('')
+                all_rows.append(new_row)
     
     if not all_rows: return
 
@@ -149,6 +167,52 @@ def compile_reports(reports_dir, output_file, members_dir):
     ws_sum.append(['Member', 'Run/Jog Points', 'Cycling Points', 'Steps Points', 'Cumulative Steps', 'Cumulative Points'])
     for entry in sorted(summary_data, key=lambda x: x[5], reverse=True):
         ws_sum.append(entry)
+
+    # Weekly Report sheet - cumulative per member in specified order
+    MEMBER_ORDER = ['CRX', 'Jeremy', 'Kai Fong', 'Chee', 'Surya', 'Kelvin', 'Ron', 'Chun Chieh']
+    
+    # Gather cumulative data per member
+    dist_idx = next((i for i, h in enumerate(all_headers) if 'Distance' in h), -1)
+    cat_idx = next((i for i, h in enumerate(all_headers) if 'Category' in h), -1)
+    steps_idx = next((i for i, h in enumerate(all_headers) if 'Steps' in h), -1)
+    pts_idx = next((i for i, h in enumerate(all_headers) if 'Points' in h), -1)
+    
+    member_cumulative = {}
+    for r in all_rows:
+        name = r[profile_idx]
+        if name not in member_cumulative:
+            member_cumulative[name] = {'steps': 0, 'run_dist': 0.0, 'cycle_dist': 0.0,
+                                       'steps_pts': 0, 'run_pts': 0, 'cycle_pts': 0}
+        cat = r[cat_idx] if cat_idx != -1 else ''
+        try:
+            dist = float(r[dist_idx].replace(',', '')) if dist_idx != -1 and r[dist_idx] else 0.0
+        except: dist = 0.0
+        try:
+            steps = int(r[steps_idx].replace(',', '')) if steps_idx != -1 and r[steps_idx] else 0
+        except: steps = 0
+        try:
+            pts = int(r[pts_idx].replace(',', '')) if pts_idx != -1 and r[pts_idx] else 0
+        except: pts = 0
+        
+        if cat == 'Steps':
+            member_cumulative[name]['steps'] += steps
+            member_cumulative[name]['steps_pts'] += pts
+        elif cat == 'Run/Jog':
+            member_cumulative[name]['run_dist'] += dist
+            member_cumulative[name]['run_pts'] += pts
+        elif cat == 'Cycling':
+            member_cumulative[name]['cycle_dist'] += dist
+            member_cumulative[name]['cycle_pts'] += pts
+
+    ws_wr = wb_sum.create_sheet("Weekly Report")
+    ws_wr.append(['Member', 'Total Steps', 'Total Distance (Jogging/Running (Km))',
+                  'Total Distance (Cycling (Km))', 'Steps Points', 'Run/Jog Points', 'Cycling Points'])
+    for name in MEMBER_ORDER:
+        d = member_cumulative.get(name, {'steps': 0, 'run_dist': 0.0, 'cycle_dist': 0.0,
+                                          'steps_pts': 0, 'run_pts': 0, 'cycle_pts': 0})
+        ws_wr.append([name, d['steps'], round(d['run_dist'], 2), round(d['cycle_dist'], 2),
+                      d['steps_pts'], d['run_pts'], d['cycle_pts']])
+
     wb_sum.save("Strides_in_Sync_2026_Tally.xlsx")
     print("All reports and tallies generated successfully.")
 
