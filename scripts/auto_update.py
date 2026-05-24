@@ -519,6 +519,10 @@ def main():
             # Date/Week mapping
             week_num, monday, sunday, dt = get_week_info(ts)
             
+            # Scoring starts Week 22 onwards
+            if week_num < 22:
+                points, tier = 0, 0
+
             # Generate note details
             note = generate_note_text(profile, dt, category, raw_dist, dist_unit, distance_km, raw_steps, raw_pace, pace_kmh, points, tier, extracted_app, status)
             

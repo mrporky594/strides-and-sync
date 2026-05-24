@@ -94,3 +94,7 @@ Results are tabulated weekly and submitted to the committee. Data is stored in m
 - **September:** Week 36, 37, 38, 39
 - **October:** Week 40, 41, 42, 43, 44
 - **November:** Week 45, 46, 47, 48
+
+### Scoring Start
+- **Weeks 18–21:** Data recorded for tracking only. All points = 0.
+- **Week 22 onwards:** Official scoring begins. Cumulative totals per pledged category are scored against the tier system.
