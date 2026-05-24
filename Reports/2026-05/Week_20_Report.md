@@ -1,4 +1,7 @@
 # Strides in Sync 2026 - Week 20 Report
+
+> ⚠️ **Trial Period** — Scores are indicative only and not officially recorded.
+
 **Period:** 2026-05-11 to 2026-05-17
 **Export Date:** 2026-05-16
 
@@ -31,3 +34,22 @@
 - **CRX (12:33:11):** OCR extraction: 5.91 km Walking. Speed (4.45 km/h) below 6 km/h threshold; classified as Steps.
 - **Jeremy (15:41:15):** 2.97 miles converted to 4.78 km Cycling. Speed (11.94 km/h). Below Tier 1 (10 km).
 - **Jeremy (16:46:21):** 4.39 miles converted to 7.07 km. OCR extraction: 7.07 km Run (7.84 km/h). Qualifies for Tier 2 but Week 20: 0 points assigned.
+
+---
+
+## Month-to-Date Cumulative Summary (May 2026 — Through Week 20)
+
+> **Scoring method:** Cumulative month-to-date total per category → tier applied **once** to the total. Each member scores in their single qualifying category only.
+
+| Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| CRX | 0 | 4.07 | 0.00 | 0 | 1 | 0 | 1 |
+| Jeremy | 0 | 15.20 | 4.78 | 0 | 3 | 0 | 3 |
+| Kai Fong | 0 | 5.62 | 0.00 | 0 | 1 | 0 | 1 |
+| Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Kelvin | 0 | 5.34 | 0.00 | 0 | 1 | 0 | 1 |
+| Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+
+**Qualifying categories:** CRX → Run/Jog | Jeremy → Run/Jog (Cycling tracked: 4.78 km, below Tier 1 threshold of 10 km) | Kai Fong → Run/Jog | Kelvin → Run/Jog

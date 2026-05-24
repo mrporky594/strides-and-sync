@@ -1,5 +1,7 @@
 # Strides in Sync 2026 - Week 21 Report
 
+> ⚠️ **Trial Period** — Scores are indicative only and not officially recorded.
+
 **Period:** 2026-05-18 to 2026-05-24
 
 | Date/Timestamp | Profile | Category | Distance (km) | Steps | Points | App | Image Link | Status |
@@ -21,20 +23,26 @@
 | 5/23/2026 18:20:55 | Jeremy | Run/Jog | 7.44 | 3,390 | 2 | Google Fit | [View](https://drive.google.com/open?id=1-4N18Lg8Tg19DsoYH72zSs4eAKswY9Ed) | Verified |
 
 ---
-**Total Points Accumulated:** 18
+**Raw Session Total (indicative, not used for scoring):** 18
 
-## Cumulative Summary (Week 21 — May 2026)
+## Month-to-Date Cumulative Summary (May 2026 — Weeks 20–21)
+
+> **Scoring method:** Cumulative month-to-date total per category → tier applied **once** to the total. Each member scores in their single qualifying category only.
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| CRX | 0 | 4.14 | 0.00 | 0 | 1 | 0 | 1 |
-| Jeremy | 0 | 14.25 | 0.00 | 0 | 3 | 0 | 3 |
-| Kai Fong | 0 | 15.79 | 0.00 | 0 | 3 | 0 | 3 |
+| CRX | 0 | 8.21 | 0.00 | 0 | 2 | 0 | 2 |
+| Jeremy | 0 | 36.89 | 4.78 | 0 | 5 | 0 | 5 |
+| Kai Fong | 0 | 21.41 | 0.00 | 0 | 4 | 0 | 4 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 105,386 | 0.00 | 0.00 | 5 | 0 | 0 | 5 |
-| Kelvin | 0 | 12.63 | 0.00 | 0 | 3 | 0 | 3 |
+| Kelvin | 0 | 22.99 | 0.00 | 0 | 4 | 0 | 4 |
 | Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+
+**Qualifying categories:** CRX → Run/Jog | Jeremy → Run/Jog (Cycling 4.78 km tracked, below Tier 1 threshold of 10 km, not scored) | Kai Fong → Run/Jog | Surya → Steps | Kelvin → Run/Jog
+
+> ⚠️ Kelvin’s entry on 5/23 (5.02 km) has Status: **Committee Approval Required** (unapproved app). Included in distance total; points subject to revision upon committee decision.
 
 ---
 
