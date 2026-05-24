@@ -18,7 +18,7 @@ ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
 # API Key and Endpoints
-FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY", "fc-5fc7e84586cb44179b1a266865412017")
+FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY", "")
 SCRAPE_URL = "https://api.firecrawl.dev/v1/scrape"
 PARSE_URL = "https://api.firecrawl.dev/v2/parse"
 

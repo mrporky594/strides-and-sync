@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 temp_images/
 .vscode/
+.gemini/
+.env
