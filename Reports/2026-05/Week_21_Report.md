@@ -17,7 +17,7 @@
 | 2026-05-20 19:19:30 | Kelvin | Steps | 3.02 | 0 | 0 | Garmin | [View](https://drive.google.com/open?id=1ZAz2eh8U6T6N6Bo44jyBXqOI7j585q5i) | Verified |
 | 2026-05-21 18:56:16 | Jeremy | Run/Jog | 2.88 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=11bg7SX_CX_UEvAn_5dxX3Qr5R3ZlhWJZ) | Verified |
 | 2026-05-22 08:02:19 | Kai Fong | Run/Jog | 3.99 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=18oVenA3CjJiNbCXZk7KDHleosuCikd_4) | Verified |
-| 2026-05-23 14:39:30 | Kelvin | Run/Jog | 5.02 | 0 | 0 | Unknown | [View](https://drive.google.com/open?id=1dPrsHvR-wXGE5pjAFKOZx8Ux94ASqz_g) | Committee Approval Required |
+| 2026-05-23 14:39:30 | Kelvin | Run/Jog | 5.02 | 0 | 0 | Garmin | [View](https://drive.google.com/open?id=1dPrsHvR-wXGE5pjAFKOZx8Ux94ASqz_g) | Verified |
 | 2026-05-23 18:20:55 | Jeremy | Run/Jog | 7.44 | 3,390 | 0 | Google Fit | [View](https://drive.google.com/open?id=1-4N18Lg8Tg19DsoYH72zSs4eAKswY9Ed) | Verified |
 
 ---
@@ -54,5 +54,5 @@
 - **Kelvin (19:19:30):** OCR extraction: 3.02 km Run (0.00 km/h). Below Tier 1 threshold or pace below 6 km/h. App identified: Garmin (Approved).
 - **Jeremy (18:56:16):** 1.79 miles converted to 2.88 km. Pace 11:07/mi converted to 8.69 km/h. Below Tier 1 threshold or pace below 6 km/h. App identified: Strava (Approved).
 - **Kai Fong (08:02:19):** OCR extraction: 3.99 km Run (9.45 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
-- **Kelvin (14:39:30):** OCR extraction: 5.02 km Run (9.55 km/h). Qualifies for Tier 1 (3.5 km). Flagged: unapproved tracking application. App identified: Unknown (Unapproved).
+- **Kelvin (14:39:30):** OCR extraction: 5.02 km Run (9.55 km/h). Qualifies for Tier 1 (3.5 km). Garmin confirmed at base of photo. App identified: Garmin (Approved).
 - **Jeremy (18:20:55):** 4.62 miles converted to 7.44 km. Pace 11:15/mi converted to 8.58 km/h. Qualifies for Tier 2 (7.0 km). App identified: Google Fit (Approved).
