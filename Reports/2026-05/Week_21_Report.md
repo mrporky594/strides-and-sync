@@ -23,18 +23,18 @@
 ---
 **Total Points Accumulated:** 18
 
-## Weekly Cumulative Summary
+## Cumulative Summary (Week 21 — May 2026)
 
-| Member | Total Steps | Total Distance (Jogging/Running (Km)) | Total Distance (Cycling (Km)) | Steps Points | Run/Jog Points | Cycling Points |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| CRX | 0 | 4.14 | 0.00 | 0 | 1 | 0 |
-| Jeremy | 0 | 14.25 | 0.00 | 0 | 3 | 0 |
-| Kai Fong | 0 | 15.79 | 0.00 | 0 | 3 | 0 |
-| Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 |
-| Surya | 105,386 | 0.00 | 0.00 | 5 | 0 | 0 |
-| Kelvin | 0 | 12.63 | 0.00 | 0 | 3 | 0 |
-| Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 |
-| Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 |
+| Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| CRX | 0 | 4.14 | 0.00 | 0 | 1 | 0 | 1 |
+| Jeremy | 0 | 14.25 | 0.00 | 0 | 3 | 0 | 3 |
+| Kai Fong | 0 | 15.79 | 0.00 | 0 | 3 | 0 | 3 |
+| Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Surya | 105,386 | 0.00 | 0.00 | 5 | 0 | 0 | 5 |
+| Kelvin | 0 | 12.63 | 0.00 | 0 | 3 | 0 | 3 |
+| Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 
 ---
 
