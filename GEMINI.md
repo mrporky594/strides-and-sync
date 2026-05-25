@@ -76,12 +76,15 @@ Every weekly report **must** include a cumulative summary section that aggregate
 | Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 
-#### Category Consistency Rule (Points Lock)
-- Each member may only earn points in **one category per month** (Steps, Run/Jog, or Cycling).
-- The qualifying category is determined by the category the member submits **most consistently** within the month.
-- Points columns for non-qualifying categories are still tracked as `0` for that member.
-- **Total Points** = sum of points from the member's single qualifying category only.
-- If a member switches categories mid-month without prior approval, flag the entry as **Committee Approval Required** and exclude those entries from the point tally until resolved.
+#### Pledge System (One Pledge Per Month)
+- **1 month = 4 weeks** for consistency purposes.
+- Each member pledges **one activity type per month**:
+  - **Steps pledge:** Walk and Jog activities count towards cumulative step totals.
+  - **Distance pledge:** Walk, Jog, and Cycle activities count towards cumulative distance totals (km).
+- A member's **first submitted activity** in the month determines their pledge for that month.
+- Activities that do **not** fall under the member's pledged category are recorded as **non-pledged** and are **excluded from the total score**.
+- **Total Points** = points from the member's single pledged category only.
+- All qualifying activities within the pledged category are **cumulatively added** across the 4-week month and scored against the tier system.
 
 ## Reporting & Submission Schedule
 Results are tabulated weekly and submitted to the committee. Data is stored in monthly folders (`./Reports/YYYY-MM/`) with weekly markdown files.

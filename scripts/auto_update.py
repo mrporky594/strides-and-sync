@@ -148,15 +148,76 @@ def get_week_info(timestamp_str):
     sunday = monday + datetime.timedelta(days=6)
     return week_num, monday, sunday, dt
 
+MONTH_WEEKS = {
+    "2026-05": range(18, 23), "2026-06": range(23, 27),
+    "2026-07": range(27, 31), "2026-08": range(31, 36),
+    "2026-09": range(36, 40), "2026-10": range(40, 45),
+    "2026-11": range(45, 49),
+}
+
 def get_report_dir(week_num):
-    if 18 <= week_num <= 22: return "2026-05"
-    elif 23 <= week_num <= 26: return "2026-06"
-    elif 27 <= week_num <= 30: return "2026-07"
-    elif 31 <= week_num <= 35: return "2026-08"
-    elif 36 <= week_num <= 39: return "2026-09"
-    elif 40 <= week_num <= 44: return "2026-10"
-    elif 45 <= week_num <= 48: return "2026-11"
+    for month, weeks in MONTH_WEEKS.items():
+        if week_num in weeks:
+            return month
     return datetime.datetime.now().strftime("%Y-%m")
+
+def get_month_weeks(week_num):
+    """Return all week numbers in the same 4-week month as the given week."""
+    for weeks in MONTH_WEEKS.values():
+        if week_num in weeks:
+            return list(weeks)
+    return [week_num]
+
+def read_report_rows(report_path):
+    """Parse activity rows from an existing markdown report."""
+    rows = []
+    if not os.path.exists(report_path):
+        return rows
+    with open(report_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            line_strip = line.strip()
+            if line_strip.startswith('|') and not line_strip.startswith('| :---') and not line_strip.startswith('| Date/Timestamp') and not line_strip.startswith('| Member'):
+                parts = [p.strip() for p in line_strip.split('|')[1:-1]]
+                if len(parts) >= 9:
+                    try:
+                        rows.append({
+                            "timestamp": parts[0],
+                            "profile": parts[1],
+                            "category": parts[2],
+                            "distance_km": float(parts[3]),
+                            "steps": int(parts[4].replace(',', '')),
+                            "points": int(parts[5]),
+                            "app": parts[6],
+                            "image_link": parts[7],
+                            "status": parts[8]
+                        })
+                    except (ValueError, IndexError):
+                        pass
+    return rows
+
+def determine_pledges(week_num):
+    """Determine each member's pledge from their first activity in the month."""
+    month_dir = get_report_dir(week_num)
+    weeks_in_month = get_month_weeks(week_num)
+    pledges = {}  # profile -> "Steps" or "Distance"
+    
+    # Collect all rows from all weeks in this month, sorted by timestamp
+    all_rows = []
+    for wk in weeks_in_month:
+        path = f"Reports/{month_dir}/Week_{wk}_Report.md"
+        all_rows.extend(read_report_rows(path))
+    
+    all_rows.sort(key=lambda x: x["timestamp"])
+    
+    for row in all_rows:
+        name = row["profile"]
+        if name not in pledges:
+            cat = row["category"]
+            if cat == "Steps":
+                pledges[name] = "Steps"
+            else:  # Run/Jog or Cycling
+                pledges[name] = "Distance"
+    return pledges
 
 def download_image(file_id, output_path):
     url = f"https://drive.google.com/uc?export=download&id={file_id}"
@@ -274,7 +335,7 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
         lines = content.split('\n')
         for line in lines:
             line_strip = line.strip()
-            if line_strip.startswith('|') and not line_strip.startswith('| :---') and not line_strip.startswith('| Date/Timestamp'):
+            if line_strip.startswith('|') and not line_strip.startswith('| :---') and not line_strip.startswith('| Date/Timestamp') and not line_strip.startswith('| Member'):
                 parts = [p.strip() for p in line_strip.split('|')[1:-1]]
                 if len(parts) >= 9:
                     existing_rows.append({
@@ -313,6 +374,8 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
     
     new_content = []
     new_content.append(f"# Strides in Sync 2026 - Week {week_num} Report\n")
+    if week_num < 22:
+        new_content.append("> ⚠️ **Trial Period** — Scores are indicative only and not officially recorded.\n")
     new_content.append(f"**Period:** {monday.strftime('%Y-%m-%d')} to {sunday.strftime('%Y-%m-%d')}\n")
     new_content.append("| Date/Timestamp | Profile | Category | Distance (km) | Steps | Points | App | Image Link | Status |")
     new_content.append("| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |")
@@ -322,31 +385,78 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
     new_content.append("\n---")
     new_content.append(f"**Total Points Accumulated:** {total_points}\n")
 
-    # Cumulative Summary Table
+    # Determine pledges for the month
+    # Write report first so determine_pledges can read it
+    dirname = os.path.dirname(report_path)
+    if dirname:
+        os.makedirs(dirname, exist_ok=True)
+    
+    # Temporarily write so pledge detection can read this week's data
+    temp_content = '\n'.join(new_content) + '\n'
+    with open(report_path, 'w', encoding='utf-8') as f:
+        f.write(temp_content)
+    
+    pledges = determine_pledges(week_num)
+    
+    # Build month-to-date cumulative from all weeks in this month
     MEMBER_ORDER = ['CRX', 'Jeremy', 'Kai Fong', 'Chee', 'Surya', 'Kelvin', 'Ron', 'Chun Chieh']
-    member_cum = {m: {'steps': 0, 'run_dist': 0.0, 'cycle_dist': 0.0,
-                      'steps_pts': 0, 'run_pts': 0, 'cycle_pts': 0} for m in MEMBER_ORDER}
-    for r in existing_rows:
+    month_dir = get_report_dir(week_num)
+    weeks_in_month = get_month_weeks(week_num)
+    
+    all_month_rows = []
+    for wk in weeks_in_month:
+        path = f"Reports/{month_dir}/Week_{wk}_Report.md"
+        all_month_rows.extend(read_report_rows(path))
+    
+    member_cum = {m: {'steps': 0, 'run_dist': 0.0, 'cycle_dist': 0.0} for m in MEMBER_ORDER}
+    
+    for r in all_month_rows:
         name = r["profile"]
         if name not in member_cum:
-            member_cum[name] = {'steps': 0, 'run_dist': 0.0, 'cycle_dist': 0.0,
-                                'steps_pts': 0, 'run_pts': 0, 'cycle_pts': 0}
-        if r["category"] == "Steps":
+            member_cum[name] = {'steps': 0, 'run_dist': 0.0, 'cycle_dist': 0.0}
+        pledge = pledges.get(name)
+        # Only accumulate pledged activities
+        if pledge == "Steps" and r["category"] == "Steps":
             member_cum[name]['steps'] += r["steps"]
-            member_cum[name]['steps_pts'] += r["points"]
-        elif r["category"] == "Run/Jog":
-            member_cum[name]['run_dist'] += r["distance_km"]
-            member_cum[name]['run_pts'] += r["points"]
-        elif r["category"] == "Cycling":
-            member_cum[name]['cycle_dist'] += r["distance_km"]
-            member_cum[name]['cycle_pts'] += r["points"]
+        elif pledge == "Distance":
+            if r["category"] == "Run/Jog":
+                member_cum[name]['run_dist'] += r["distance_km"]
+            elif r["category"] == "Cycling":
+                member_cum[name]['cycle_dist'] += r["distance_km"]
 
-    new_content.append("## Weekly Cumulative Summary\n")
-    new_content.append("| Member | Total Steps | Total Distance (Jogging/Running (Km)) | Total Distance (Cycling (Km)) | Steps Points | Run/Jog Points | Cycling Points |")
-    new_content.append("| :--- | :--- | :--- | :--- | :--- | :--- | :--- |")
+    # Calculate points from cumulative totals
+    scoring_active = week_num >= 22
+    member_pts = {}
     for name in MEMBER_ORDER:
         d = member_cum[name]
-        new_content.append(f"| {name} | {d['steps']:,} | {d['run_dist']:.2f} | {d['cycle_dist']:.2f} | {d['steps_pts']} | {d['run_pts']} | {d['cycle_pts']} |")
+        s_pts = r_pts = c_pts = 0
+        if scoring_active:
+            pledge = pledges.get(name)
+            if pledge == "Steps":
+                s_pts, _, _ = allocate_points("Steps", 0, d['steps'], 99)
+            elif pledge == "Distance":
+                r_pts, _, _ = allocate_points("Run/Jog", d['run_dist'], 0, 99)
+                c_pts, _, _ = allocate_points("Cycling", d['cycle_dist'], 0, 99)
+        member_pts[name] = {'steps_pts': s_pts, 'run_pts': r_pts, 'cycle_pts': c_pts,
+                            'total': s_pts + r_pts + c_pts}
+
+    month_name = datetime.datetime.strptime(month_dir, "%Y-%m").strftime("%B %Y")
+    new_content.append(f"## Month-to-Date Cumulative Summary ({month_name} — Through Week {week_num})\n")
+    new_content.append("> **Scoring method:** Cumulative month-to-date total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring.\n")
+    new_content.append("| Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |")
+    new_content.append("| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
+    for name in MEMBER_ORDER:
+        d = member_cum[name]
+        p = member_pts[name]
+        new_content.append(f"| {name} | {d['steps']:,} | {d['run_dist']:.2f} | {d['cycle_dist']:.2f} | {p['steps_pts']} | {p['run_pts']} | {p['cycle_pts']} | {p['total']} |")
+
+    # Pledge summary line
+    pledge_parts = []
+    for name in MEMBER_ORDER:
+        if name in pledges:
+            pledge_parts.append(f"{name} → {pledges[name]}")
+    if pledge_parts:
+        new_content.append(f"\n**Pledges:** {' | '.join(pledge_parts)}")
 
     new_content.append("\n---\n")
     new_content.append("**Notes:**")
@@ -354,10 +464,6 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
         new_content.append(n)
     
     new_content_str = '\n'.join(new_content) + '\n'
-    
-    dirname = os.path.dirname(report_path)
-    if dirname:
-        os.makedirs(dirname, exist_ok=True)
     with open(report_path, 'w', encoding='utf-8') as f:
         f.write(new_content_str)
     print(f"Updated report: {report_path}")

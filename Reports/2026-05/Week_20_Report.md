@@ -39,17 +39,19 @@
 
 ## Month-to-Date Cumulative Summary (May 2026 — Through Week 20)
 
-> **Scoring method:** Cumulative month-to-date total per category → tier applied **once** to the total. Each member scores in their single qualifying category only.
+> **Scoring method:** Cumulative month-to-date total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring. Scoring begins Week 22 onwards.
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| CRX | 0 | 4.07 | 0.00 | 0 | 1 | 0 | 1 |
-| Jeremy | 0 | 15.20 | 4.78 | 0 | 3 | 0 | 3 |
-| Kai Fong | 0 | 5.62 | 0.00 | 0 | 1 | 0 | 1 |
+| CRX | 0 | 4.07 | 0.00 | 0 | 0 | 0 | 0 |
+| Jeremy | 0 | 15.20 | 0.00 | 0 | 0 | 0 | 0 |
+| Kai Fong | 0 | 5.62 | 0.00 | 0 | 0 | 0 | 0 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Kelvin | 0 | 5.34 | 0.00 | 0 | 1 | 0 | 1 |
+| Kelvin | 0 | 5.34 | 0.00 | 0 | 0 | 0 | 0 |
 | Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 
-**Qualifying categories:** CRX → Run/Jog | Jeremy → Run/Jog (Cycling tracked: 4.78 km, below Tier 1 threshold of 10 km) | Kai Fong → Run/Jog | Kelvin → Run/Jog
+**Pledges:** CRX → Distance (Run/Jog) | Jeremy → Distance (Run/Jog) | Kai Fong → Distance (Run/Jog) | Kelvin → Distance (Run/Jog)
+
+**Non-pledged entries (excluded from scoring):** Jeremy — Steps (3.46 km, 9.29 km), Cycling (4.78 km); CRX — Steps (5.91 km)

@@ -25,18 +25,22 @@
 
 > Scoring begins Week 22 onwards. Week 21 data is recorded for cumulative tracking only.
 
-## Weekly Cumulative Summary
+## Month-to-Date Cumulative Summary (May 2026 — Through Week 21)
 
-| Member | Total Steps | Total Distance (Jogging/Running (Km)) | Total Distance (Cycling (Km)) | Steps Points | Run/Jog Points | Cycling Points |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| CRX | 0 | 4.14 | 0.00 | 0 | 0 | 0 |
-| Jeremy | 3,390 | 25.23 | 0.00 | 0 | 0 | 0 |
-| Kai Fong | 0 | 15.79 | 0.00 | 0 | 0 | 0 |
-| Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 |
-| Surya | 105,386 | 0.00 | 0.00 | 0 | 0 | 0 |
-| Kelvin | 0 | 22.97 | 0.00 | 0 | 0 | 0 |
-| Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 |
-| Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 |
+> **Scoring method:** Cumulative month-to-date total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring.
+
+| Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| CRX | 0 | 8.21 | 0.00 | 0 | 0 | 0 | 0 |
+| Jeremy | 0 | 40.43 | 4.78 | 0 | 0 | 0 | 0 |
+| Kai Fong | 0 | 21.41 | 0.00 | 0 | 0 | 0 | 0 |
+| Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Surya | 105,386 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Kelvin | 0 | 28.31 | 0.00 | 0 | 0 | 0 | 0 |
+| Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+
+**Pledges:** CRX → Distance (Run/Jog) | Jeremy → Distance (Run/Jog) | Kai Fong → Distance (Run/Jog) | Surya → Steps | Kelvin → Distance (Run/Jog)
 
 ---
 
