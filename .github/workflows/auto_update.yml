@@ -2,8 +2,8 @@ name: Auto-Update Strides & Sync Scores
 
 on:
   schedule:
-    # Runs at 12:00 UTC (8:00 PM Singapore SGT time) everyday
-    - cron: '0 12 * * *'
+    # Runs at 02:00 UTC (10:00 AM Singapore SGT time) everyday
+    - cron: '0 2 * * *'
   workflow_dispatch: # Allows manual trigger from the GitHub Actions tab
 
 jobs:
