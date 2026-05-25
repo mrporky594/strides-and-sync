@@ -17,6 +17,15 @@ ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
+# Load .env file if present (for local runs)
+env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env")
+if os.path.exists(env_path):
+    with open(env_path) as _f:
+        for _line in _f:
+            if "=" in _line and not _line.startswith("#"):
+                k, v = _line.strip().split("=", 1)
+                os.environ.setdefault(k, v)
+
 # API Key and Endpoints
 FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY", "")
 SCRAPE_URL = "https://api.firecrawl.dev/v1/scrape"
@@ -195,15 +204,19 @@ def read_report_rows(report_path):
                         pass
     return rows
 
+SCORING_START_WEEK = 22
+
 def determine_pledges(week_num):
-    """Determine each member's pledge from their first activity in the month."""
+    """Determine each member's pledge from their first activity from Week 22 onwards."""
     month_dir = get_report_dir(week_num)
     weeks_in_month = get_month_weeks(week_num)
     pledges = {}  # profile -> "Steps" or "Distance"
     
-    # Collect all rows from all weeks in this month, sorted by timestamp
+    # Only consider weeks from scoring start onwards
+    scoring_weeks = [wk for wk in weeks_in_month if wk >= SCORING_START_WEEK]
+    
     all_rows = []
-    for wk in weeks_in_month:
+    for wk in scoring_weeks:
         path = f"Reports/{month_dir}/Week_{wk}_Report.md"
         all_rows.extend(read_report_rows(path))
     
@@ -220,7 +233,7 @@ def determine_pledges(week_num):
     return pledges
 
 def download_image(file_id, output_path):
-    url = f"https://drive.google.com/uc?export=download&id={file_id}"
+    url = f"https://lh3.googleusercontent.com/d/{file_id}"
     req = urllib.request.Request(
         url, 
         headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
@@ -228,15 +241,12 @@ def download_image(file_id, output_path):
     try:
         with urllib.request.urlopen(req, context=ctx) as response:
             content = response.read()
-            if b"confirm=" in content or b"Google Drive - Virus scan warning" in content:
-                html = content.decode('utf-8', errors='ignore')
-                match = re.search(r'confirm=([A-Za-z0-9_]+)', html)
-                if match:
-                    confirm = match.group(1)
-                    confirm_url = f"https://drive.google.com/uc?export=download&confirm={confirm}&id={file_id}"
-                    req2 = urllib.request.Request(confirm_url, headers={'User-Agent': 'Mozilla/5.0'}, context=ctx)
-                    with urllib.request.urlopen(req2) as resp2:
-                        content = resp2.read()
+            if content[:15].lower().startswith(b'<!doctype') or content[:5].lower().startswith(b'<html'):
+                # Fallback to uc?export=download
+                url2 = f"https://drive.google.com/uc?export=download&id={file_id}"
+                req2 = urllib.request.Request(url2, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+                with urllib.request.urlopen(req2, context=ctx) as resp2:
+                    content = resp2.read()
             with open(output_path, 'wb') as f:
                 f.write(content)
             return True
@@ -398,13 +408,14 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
     
     pledges = determine_pledges(week_num)
     
-    # Build month-to-date cumulative from all weeks in this month
+    # Build cumulative from scoring start week onwards only
     MEMBER_ORDER = ['CRX', 'Jeremy', 'Kai Fong', 'Chee', 'Surya', 'Kelvin', 'Ron', 'Chun Chieh']
     month_dir = get_report_dir(week_num)
     weeks_in_month = get_month_weeks(week_num)
+    scoring_weeks = [wk for wk in weeks_in_month if wk >= SCORING_START_WEEK]
     
     all_month_rows = []
-    for wk in weeks_in_month:
+    for wk in scoring_weeks:
         path = f"Reports/{month_dir}/Week_{wk}_Report.md"
         all_month_rows.extend(read_report_rows(path))
     

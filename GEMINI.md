@@ -100,4 +100,4 @@ Results are tabulated weekly and submitted to the committee. Data is stored in m
 
 ### Scoring Start
 - **Weeks 18–21:** Data recorded for tracking only. All points = 0.
-- **Week 22 onwards:** Official scoring begins. Cumulative totals per pledged category are scored against the tier system.
+- **Week 22 onwards:** Official scoring begins. Cumulative totals are counted **from Week 22 onwards only**. A member's first entry in Week 22 determines their pledge for the month.
