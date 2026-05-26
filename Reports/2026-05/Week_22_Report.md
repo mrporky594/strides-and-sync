@@ -21,7 +21,7 @@
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | CRX | 29,156 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Jeremy | 0 | 3.86 | 0.00 | 0 | 0 | 0 | 0 |
+| Jeremy | 0 | 3.86 | 0.00 | 0 | 1 | 0 | 1 |
 | Kai Fong | 0 | 5.63 | 0.00 | 0 | 1 | 0 | 1 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
