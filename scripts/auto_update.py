@@ -107,6 +107,17 @@ def calculate_pace_kmh(pace_str, is_mi, distance_km, duration_str):
         
     return 0.0
 
+def verify_ocr_accuracy(category, distance_km, pace_kmh, duration_str):
+    """Triple-check OCR accuracy: verify distance matches pace and duration."""
+    dur_hours = parse_duration_hours(duration_str)
+    if dur_hours > 0 and pace_kmh > 0:
+        expected_distance = pace_kmh * dur_hours
+        if distance_km > 0:
+            diff_percent = abs(distance_km - expected_distance) / expected_distance * 100
+            if diff_percent > 10:
+                return False, f"Distance {distance_km:.2f}km differs {diff_percent:.1f}% from expected {expected_distance:.2f}km"
+    return True, "Verified"
+
 def allocate_points(category, distance_km, steps, pace_kmh):
     effective_category = category
     if category == "Run/Jog":
@@ -611,6 +622,12 @@ def main():
                 distance_km = round(raw_dist, 2)
                 
             pace_kmh = calculate_pace_kmh(raw_pace, is_mi, distance_km, raw_dur)
+            
+            # Triple-check OCR accuracy
+            ocr_valid, ocr_msg = verify_ocr_accuracy(raw_cat, distance_km, pace_kmh, raw_dur)
+            if not ocr_valid:
+                print(f"OCR verification warning for {profile}: {ocr_msg}")
+                status = "Flagged"
             
             # Category alignment
             category = "Steps"

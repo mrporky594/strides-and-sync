@@ -24,6 +24,10 @@ This project tracks exercise sessions (Running, Jogging, Cycling, and Steps) and
     *   Always verify the **Total Duration** against the **Distance** and **Pace** to prevent OCR hallucinations.
     *   Look for a '1' preceding the decimal (e.g., distinguishing between 1.49 and 15.01).
     *   Check for 'mi' vs 'km' labels explicitly.
+    *   **Triple-check verification:** For every entry, verify:
+        1. **Distance matches pace and duration** — Calculate expected distance from pace × duration. If OCR distance differs by >10%, flag for manual review.
+        2. **Unit labels are explicit** — Confirm 'mi', 'km', 'miles', or 'kilometers' is visible. If missing, assume based on app defaults.
+        3. **Decimal point is correct** — Distinguish between 1.49 and 14.9 by checking surrounding digits and context.
 
 5.  **Image Fetch Failure Workflow:**
     *   If `firecrawl_scrape` fails on a Google Drive link (e.g., 403 Forbidden), download the image locally using `run_shell_command` with `Invoke-WebRequest`.
