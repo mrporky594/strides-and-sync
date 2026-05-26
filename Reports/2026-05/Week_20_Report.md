@@ -11,7 +11,7 @@
 | 2026-05-14 19:59:35 | Jeremy | Run/Jog | 2.40 | 0 | [View](https://drive.google.com/open?id=1U4fIRY9FQWB-EAPPm7NYOQyb1iNYQhEO) | Verified |
 | 2026-05-14 20:34:20 | CRX | Run/Jog | 4.07 | 0 | [View](https://drive.google.com/open?id=1m_bjHCHRdh9OgELWaW626SmZL3tYnxFV) | **Manual Fix** |
 | 2026-05-14 23:28:39 | Kai Fong | Run/Jog | 5.62 | 0 | [View](https://drive.google.com/open?id=1yCKPuLWgUVTRzXDaqlAv2_d7Bf3EeVV9) | Verified |
-| 2026-05-16 14:00:21 | Jeremy | Steps | 3.46 | 0 | [View](https://drive.google.com/open?id=16q7nHBVHK7SJDQDUg1cCuv9P3FY_l7uD) | Flagged |
+| 2026-05-16 14:00:21 | Jeremy | Run/Jog | 3.46 | 0 | 0 | Google Fit | [View](https://drive.google.com/open?id=16q7nHBVHK7SJDQDUg1cCuv9P3FY_l7uD) | Verified |
 | 2026-05-16 17:39:10 | Kelvin | Run/Jog | 5.34 | 0 | [View](https://drive.google.com/open?id=1QCGZ-4QdgF21qBuTC9vPmE01aLnSzCHe) | Verified |
 | 2026-05-16 18:30:22 | Jeremy | Run/Jog | 3.56 | 0 | [View](https://drive.google.com/open?id=1JicVtfdSDWLlGWLmDgrRW8WIb6RLEgup) | Verified |
 | 2026-05-17 09:37:57 | Jeremy | Steps | 9.29 | 0 | [View](https://drive.google.com/open?id=1mb3un6MaQ0EUgL21uEbGt7Xp6u-NbVEL) | Verified |
@@ -44,7 +44,7 @@
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | CRX | 0 | 4.07 | 0.00 | 0 | 0 | 0 | 0 |
-| Jeremy | 0 | 15.20 | 0.00 | 0 | 0 | 0 | 0 |
+| Jeremy | 0 | 18.66 | 0.00 | 0 | 3 | 0 | 3 |
 | Kai Fong | 0 | 5.62 | 0.00 | 0 | 0 | 0 | 0 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |

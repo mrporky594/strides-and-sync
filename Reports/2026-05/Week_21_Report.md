@@ -27,16 +27,16 @@
 
 ## Month-to-Date Cumulative Summary (May 2026 — Through Week 21)
 
-> **Scoring method:** Cumulative month-to-date total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring.
+> **Scoring method:** Weekly cumulative total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring. Cumulative resets each week.
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| CRX | 0 | 8.21 | 0.00 | 0 | 0 | 0 | 0 |
-| Jeremy | 0 | 40.43 | 4.78 | 0 | 0 | 0 | 0 |
-| Kai Fong | 0 | 21.41 | 0.00 | 0 | 0 | 0 | 0 |
+| CRX | 0 | 4.14 | 0.00 | 0 | 1 | 0 | 1 |
+| Jeremy | 0 | 21.69 | 0.00 | 0 | 4 | 0 | 4 |
+| Kai Fong | 0 | 15.79 | 0.00 | 0 | 3 | 0 | 3 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Surya | 105,386 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Kelvin | 0 | 28.31 | 0.00 | 0 | 0 | 0 | 0 |
+| Surya | 105,386 | 0.00 | 0.00 | 5 | 0 | 0 | 5 |
+| Kelvin | 0 | 17.65 | 0.00 | 0 | 3 | 0 | 3 |
 | Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 

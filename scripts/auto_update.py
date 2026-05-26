@@ -110,9 +110,8 @@ def calculate_pace_kmh(pace_str, is_mi, distance_km, duration_str):
 def allocate_points(category, distance_km, steps, pace_kmh):
     effective_category = category
     if category == "Run/Jog":
-        if pace_kmh < 6.0:
-            effective_category = "Steps"
-        elif distance_km < 2.0:
+        # Only classify as Steps if BOTH pace < 6 km/h AND distance < 2 km
+        if pace_kmh < 6.0 and distance_km < 2.0:
             effective_category = "Steps"
             
     points = 0

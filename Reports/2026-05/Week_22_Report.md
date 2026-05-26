@@ -15,7 +15,7 @@
 
 ## Month-to-Date Cumulative Summary (May 2026 — Through Week 22)
 
-> **Scoring method:** Cumulative total from Week 22 onwards per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring.
+> **Scoring method:** Weekly cumulative total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring. Cumulative resets each week.
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |

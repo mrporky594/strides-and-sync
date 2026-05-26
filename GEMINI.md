@@ -45,7 +45,7 @@ This project tracks exercise sessions (Running, Jogging, Cycling, and Steps) and
 | 5 | 95,000 | 30 | 90 | 5 |
 | 6 | 115,000 | 40 | 120 | 6 |
 
-*Note: Run/Jog requires a minimum pace of 6 km/h to qualify for these tiers.*
+*Note: Run/Jog classification requires **both** pace ≥ 6 km/h **AND** distance ≥ 2 km. If either condition fails, entry is classified as Steps.*
 
 ### Team Ranking Rules
 *   **Weekly Ranking:** Team weekly ranking is based on the **average points** of team members.
@@ -61,7 +61,7 @@ Each weekly report begins with a raw activity log table:
 | YYYY-MM-DD HH:MM | Name | Category | 0.00 | 0 | 0 | App Name | [Link] | Verified/Flagged/Approval Required |
 
 ### Part 2 — Cumulative Summary Table
-Every weekly report **must** include a cumulative summary section that aggregates all activity across the reporting period (weekly or monthly as applicable). The table **must** list members in the following fixed order:
+Every weekly report **must** include a cumulative summary section that aggregates all activity **within that week only**. The table **must** list members in the following fixed order:
 
 > CRX → Jeremy → Kai Fong → Chee → Surya → Kelvin → Ron → Chun Chieh
 
@@ -84,7 +84,8 @@ Every weekly report **must** include a cumulative summary section that aggregate
 - A member's **first submitted activity** in the month determines their pledge for that month.
 - Activities that do **not** fall under the member's pledged category are recorded as **non-pledged** and are **excluded from the total score**.
 - **Total Points** = points from the member's single pledged category only.
-- All qualifying activities within the pledged category are **cumulatively added** across the 4-week month and scored against the tier system.
+- All qualifying activities within the pledged category are **cumulatively added within each week** and scored against the tier system.
+- **Cumulative resets each week** — totals do not carry forward to the next week.
 
 ## Reporting & Submission Schedule
 Results are tabulated weekly and submitted to the committee. Data is stored in monthly folders (`./Reports/YYYY-MM/`) with weekly markdown files.
