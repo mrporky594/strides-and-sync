@@ -686,11 +686,9 @@ def main():
         _, monday, sunday, _ = get_week_info(entries[0]["timestamp"])
         report_dir = get_report_dir(week_num)
         
-        # Paths to update
-        root_report = f"Week_{week_num}_Report.md"
+        # Path to update (Reports folder only)
         sub_report = f"Reports/{report_dir}/Week_{week_num}_Report.md"
         
-        update_markdown_report(root_report, week_num, monday, sunday, entries)
         update_markdown_report(sub_report, week_num, monday, sunday, entries)
         
     # Recompile Excel Sheets
