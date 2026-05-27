@@ -8,7 +8,7 @@
 | 2026-05-25 18:37:29 | Kelvin | Run/Jog | 7.57 | 0 | 0 | Garmin | [View](https://drive.google.com/open?id=17esspn1xAhgwauCbQB93qgO0dgOz4kBh) | Verified |
 | 2026-05-25 18:46:04 | Kai Fong | Run/Jog | 5.63 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=17UMbgH597abl2evGBsIWlIASpOKLrLv0) | Verified |
 | 2026-05-26 14:21:27 | Jeremy | Run/Jog | 3.86 | 0 | 0 | Google Fit | [View](https://drive.google.com/open?id=1D9QQr-pbxsnDFxc9_JjXJfGuaZcbt-xP) | Verified |
-| 2026-05-27 09:35:55 | Kelvin | Run/Jog | 7.56 | 0 | 0 | Unknown | [View](https://drive.google.com/open?id=1wAsyMW6i1zDzJLt1diIUMg19WXKTBiyh) | Verified |
+| 2026-05-27 09:35:55 | Kelvin | Run/Jog | 7.56 | 0 | 0 | Garmin | [View](https://drive.google.com/open?id=1wAsyMW6i1zDzJLt1diIUMg19WXKTBiyh) | Verified |
 
 ---
 **Total Points Accumulated:** 0
