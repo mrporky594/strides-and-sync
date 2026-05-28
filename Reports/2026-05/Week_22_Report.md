@@ -9,6 +9,8 @@
 | 2026-05-25 18:46:04 | Kai Fong | Run/Jog | 5.63 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=17UMbgH597abl2evGBsIWlIASpOKLrLv0) | Verified |
 | 2026-05-26 14:21:27 | Jeremy | Run/Jog | 3.86 | 0 | 0 | Google Fit | [View](https://drive.google.com/open?id=1D9QQr-pbxsnDFxc9_JjXJfGuaZcbt-xP) | Verified |
 | 2026-05-27 09:35:55 | Kelvin | Run/Jog | 7.56 | 0 | 0 | Garmin | [View](https://drive.google.com/open?id=1wAsyMW6i1zDzJLt1diIUMg19WXKTBiyh) | Verified |
+| 2026-05-27 18:23:38 | Kai Fong | Run/Jog | 5.72 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=15inSIvXb4Jfd28SNw0hJAxG8mzCyHjJG) | Verified |
+| 2026-05-28 18:44:00 | Jeremy | Run/Jog | 7.06 | 0 | 0 | Google Fit | [View](https://drive.google.com/open?id=1wGKmtM6acpU0uEouCNN2gJkgN6Eol3c8) | Verified |
 
 ---
 **Total Points Accumulated:** 0
@@ -22,8 +24,8 @@
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | CRX | 29,156 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Jeremy | 0 | 3.86 | 0.00 | 0 | 1 | 0 | 1 |
-| Kai Fong | 0 | 5.63 | 0.00 | 0 | 1 | 0 | 1 |
+| Jeremy | 0 | 10.92 | 0.00 | 0 | 3 | 0 | 3 |
+| Kai Fong | 0 | 11.35 | 0.00 | 0 | 3 | 0 | 3 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Kelvin | 0 | 15.13 | 0.00 | 0 | 4 | 0 | 4 |
