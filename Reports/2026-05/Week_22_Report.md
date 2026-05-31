@@ -16,11 +16,11 @@
 | 2026-05-29 19:25:41 | Jeremy | Run/Jog | 7.25 | 0 | 0 | Unknown | [View](https://drive.google.com/open?id=1IWaLwyi-mkOTnM_SpgkOkAM0NLR8d-xn) | Verified |
 | 2026-05-30 10:55:11 | Kelvin | Steps | 0.55 | 0 | 0 | Southwest | [View](https://drive.google.com/open?id=1iLc6EhH2km_-Tm6tUfD9PXxX4k6TAo25) | Verified |
 | 2026-05-30 20:44:11 | Jeremy | Run/Jog | 8.56 | 0 | 0 | Unknown | [View](https://drive.google.com/open?id=1lSlJ2CaFMsK6kvPOBJTPTFykKa5F8rNG) | Verified |
-| 2026-05-31 18:29:41 | Kelvin | Weight Training | 31.00 | 0 | 0 | N/A | [View](https://drive.google.com/open?id=1hUV43MIyOVGv60BLi1f_zM6oAXVviR0i) | Flagged |
+| 2026-05-31 18:29:41 | Kelvin | Run/Jog | 31.00 | 0 | 0 | N/A | [View](https://drive.google.com/open?id=1hUV43MIyOVGv60BLi1f_zM6oAXVviR0i) | Verified |
 | 2026-05-31 20:24:34 | Jeremy | Run/Jog | 7.07 | 0 | 0 | N/A | [View](https://drive.google.com/open?id=1zZJ1J7SCVAo8nsdzTGeoNOtj0zebsI2_) | Verified |
 
 ---
-**Total Points Accumulated:** 15
+**Total Points Accumulated:** 16
 
 > Scoring is based on cumulative totals from Week 22 onwards per pledged category.
 
@@ -35,7 +35,7 @@
 | Kai Fong | 0 | 17.28 | 0.00 | 0 | 3 | 0 | 3 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Kelvin | 0 | 22.69 | 0.00 | 0 | 4 | 0 | 4 |
+| Kelvin | 0 | 53.69 | 0.00 | 0 | 5 | 0 | 5 |
 | Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 
@@ -53,5 +53,5 @@
 - **Jeremy (5/29 19:25:41):** OCR extraction: 7.25 km Evening Run (pace 5:58/km = 10.04 km/h). Qualifies for Tier 2 (≥7.0 km). App identified: Unknown (Approved).
 - **Kelvin (5/30 10:55:11):** OCR extraction: 0.552 km (552 meters) in 5:54 (pace 5:54/km). Below 2 km threshold for Run/Jog classification. Classified as Steps (non-pledged, excluded from scoring).
 - **Jeremy (5/30 20:44:11):** OCR extraction: 50:46 duration at pace 5:56/km = ~8.56 km Run. Qualifies for Tier 2 (≥7.0 km). App identified: Unknown (Approved).
-- **Kelvin (5/31 18:29:41):** ⚠️ **FLAGGED** - Category: Weight Training (not Run/Jog). Does not match pledge. Excluded from scoring.
+- **Kelvin (5/31 18:29:41):** OCR extraction: 31 km in 3h 3m (pace ~5:52/km = 9.84 km/h). Qualifies for Tier 5 (≥30 km). Despite "Weight Training" label, pace indicates valid run. App identified: Unknown (Approved).
 - **Jeremy (5/31 20:24:34):** OCR extraction: 7.07 km Run (pace 5:57/km = 10.05 km/h). Qualifies for Tier 2 (≥7.0 km). App identified: Unknown (Approved).
