@@ -14,7 +14,7 @@
 | 2026-05-29 17:48:24 | Kai Fong | Run/Jog | 5.93 | 0 | 0 | Strava App | [View](https://drive.google.com/open?id=19UiPJfkLAJ20s0Q3RfeHbPg8rA93qJu8) | Verified |
 | 2026-05-29 18:09:22 | Kelvin | Run/Jog | 7.56 | 0 | 0 | Garmin Forerunner 265 | [View](https://drive.google.com/open?id=1FnyyHYR2Ncpiz4YbLAqmJeDxXLotykeI) | Verified |
 | 2026-05-29 19:25:41 | Jeremy | Run/Jog | 7.25 | 0 | 0 | Unknown | [View](https://drive.google.com/open?id=1IWaLwyi-mkOTnM_SpgkOkAM0NLR8d-xn) | Verified |
-| 2026-05-30 10:55:11 | Kelvin | Steps | 0.55 | 0 | 0 | Southwest | [View](https://drive.google.com/open?id=1iLc6EhH2km_-Tm6tUfD9PXxX4k6TAo25) | Verified |
+| 2026-05-30 10:55:11 | Kelvin | Run/Jog | 0.00 | 0 | 0 | Southwest | [View](https://drive.google.com/open?id=1iLc6EhH2km_-Tm6tUfD9PXxX4k6TAo25) | Flagged |
 | 2026-05-30 20:44:11 | Jeremy | Run/Jog | 8.56 | 0 | 0 | Unknown | [View](https://drive.google.com/open?id=1lSlJ2CaFMsK6kvPOBJTPTFykKa5F8rNG) | Verified |
 | 2026-05-31 18:29:41 | Kelvin | Run/Jog | 31.00 | 0 | 0 | N/A | [View](https://drive.google.com/open?id=1hUV43MIyOVGv60BLi1f_zM6oAXVviR0i) | Verified |
 | 2026-05-31 20:24:34 | Jeremy | Run/Jog | 7.07 | 0 | 0 | N/A | [View](https://drive.google.com/open?id=1zZJ1J7SCVAo8nsdzTGeoNOtj0zebsI2_) | Verified |
@@ -51,7 +51,7 @@
 - **Kai Fong (5/29 17:48:24):** OCR extraction: 5.93 km Jog (pace 6:25/km = 9.37 km/h). Qualifies for Tier 1 (≥3.5 km). App identified: Strava App (Approved).
 - **Kelvin (5/29 18:09:22):** OCR extraction: 7.56 km Run (pace 5:52/km = 10.20 km/h). Qualifies for Tier 2 (≥7.0 km). App identified: Garmin Forerunner 265 (Approved).
 - **Jeremy (5/29 19:25:41):** OCR extraction: 7.25 km Evening Run (pace 5:58/km = 10.04 km/h). Qualifies for Tier 2 (≥7.0 km). App identified: Unknown (Approved).
-- **Kelvin (5/30 10:55:11):** OCR extraction: 0.552 km (552 meters) in 5:54 (pace 5:54/km). Below 2 km threshold for Run/Jog classification. Classified as Steps (non-pledged, excluded from scoring).
+- **Kelvin (5/30 10:55:11):** ⚠️ **FLAGGED** - OCR shows "Calo 552" (Calories, not distance). No distance metric found. Pace shown as "/km" (incomplete). Invalid entry. Requires manual review.
 - **Jeremy (5/30 20:44:11):** OCR extraction: 50:46 duration at pace 5:56/km = ~8.56 km Run. Qualifies for Tier 2 (≥7.0 km). App identified: Unknown (Approved).
 - **Kelvin (5/31 18:29:41):** OCR extraction: 31 km in 3h 3m (pace ~5:52/km = 9.84 km/h). Qualifies for Tier 5 (≥30 km). Despite "Weight Training" label, pace indicates valid run. App identified: Unknown (Approved).
 - **Jeremy (5/31 20:24:34):** OCR extraction: 7.07 km Run (pace 5:57/km = 10.05 km/h). Qualifies for Tier 2 (≥7.0 km). App identified: Unknown (Approved).
