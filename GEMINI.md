@@ -39,6 +39,14 @@ This project tracks exercise sessions (Running, Jogging, Cycling, and Steps) and
 *   *Example:* A run of 3.4 km is within 5% of the 3.5 km Tier 1 threshold and must be flagged.
 *   If a user provides a manual correction, the manual value takes precedence over the OCR data.
 
+## Tier Assignment Verification
+**MANDATORY STEP:** Before assigning points to any entry, **always verify the cumulative total against the tier table**:
+1. Calculate the cumulative total for the member's pledged category.
+2. Cross-reference the total against the tier thresholds in the Points Tier System table.
+3. Assign points based on the **highest tier the cumulative total qualifies for** (≥ threshold).
+4. **Do not assume** — always check the exact threshold values.
+*   *Example:* 94,600 steps is below Tier 5 (95,000), so it qualifies for Tier 4 (75,000) = 4 pts, not 5 pts.
+
 ## Points Tier System
 | Tier | Steps | Run/Jog (km) | Cycling (km) | Points |
 | :--- | :--- | :--- | :--- | :--- |
