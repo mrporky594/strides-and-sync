@@ -21,7 +21,7 @@
 | 2026-06-01 09:09:44 | CRX | Steps | 0.00 | 44,238 | 0 | fitness app | [View](https://drive.google.com/open?id=1typ8zV8VgOQsK7b-gPPC8--hoVQJQ2IU) | Verified |
 
 ---
-**Total Points Accumulated:** 23
+**Total Points Accumulated:** 24
 
 > Scoring is based on cumulative totals from Week 22 onwards per pledged category.
 
@@ -32,7 +32,7 @@
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | CRX | 94,600 | 0.00 | 0.00 | 4 | 0 | 0 | 4 |
-| Jeremy | 0 | 33.80 | 0.00 | 0 | 4 | 0 | 4 |
+| Jeremy | 0 | 33.80 | 0.00 | 0 | 5 | 0 | 5 |
 | Kai Fong | 0 | 17.28 | 0.00 | 0 | 3 | 0 | 3 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
