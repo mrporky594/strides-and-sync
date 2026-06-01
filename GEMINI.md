@@ -45,6 +45,7 @@ This project tracks exercise sessions (Running, Jogging, Cycling, and Steps) and
 2. Cross-reference the total against the tier thresholds in the Points Tier System table.
 3. Assign points based on the **highest tier the cumulative total qualifies for** (≥ threshold).
 4. **Do not assume** — always check the exact threshold values.
+5. **For manual processing:** Run `python scripts/verify_score.py <run|cycling|steps> <value>` to confirm tier assignment before writing to the report.
 *   *Example:* 94,600 steps is below Tier 5 (95,000), so it qualifies for Tier 4 (75,000) = 4 pts, not 5 pts.
 
 ## Points Tier System
