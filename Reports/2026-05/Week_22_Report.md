@@ -21,7 +21,7 @@
 | 2026-06-01 09:09:44 | CRX | Steps | 0.00 | 44,238 | 0 | fitness app | [View](https://drive.google.com/open?id=1typ8zV8VgOQsK7b-gPPC8--hoVQJQ2IU) | Verified |
 
 ---
-**Total Points Accumulated:** 22
+**Total Points Accumulated:** 23
 
 > Scoring is based on cumulative totals from Week 22 onwards per pledged category.
 
@@ -36,7 +36,7 @@
 | Kai Fong | 0 | 17.28 | 0.00 | 0 | 3 | 0 | 3 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Kelvin | 0 | 30.85 | 0.00 | 0 | 4 | 0 | 4 |
+| Kelvin | 0 | 30.85 | 0.00 | 0 | 5 | 0 | 5 |
 | Ron | 60,056 | 0.00 | 0.00 | 2 | 0 | 0 | 2 |
 | Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 
