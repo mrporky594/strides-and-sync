@@ -5,10 +5,9 @@
 | Date/Timestamp | Profile | Category | Distance (km) | Steps | Points | App | Image Link | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-06-01 08:14:08 | Kai Fong | Run/Jog | 6.31 | 0 | 0 | Strava App | [View](https://drive.google.com/open?id=10bvwHdo8xnb015s7k52kVtcgYjbVrS4V) | Verified |
-| 2026-06-01 09:09:44 | CRX | Steps | 0.00 | 44,238 | 0 | fitness app | [View](https://drive.google.com/open?id=1typ8zV8VgOQsK7b-gPPC8--hoVQJQ2IU) | Verified |
 
 ---
-**Total Points Accumulated:** 0
+**Total Points Accumulated:** 1
 
 > Scoring is based on cumulative totals from Week 22 onwards per pledged category.
 
@@ -18,7 +17,7 @@
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| CRX | 44,238 | 0.00 | 0.00 | 1 | 0 | 0 | 1 |
+| CRX | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Jeremy | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Kai Fong | 0 | 6.31 | 0.00 | 0 | 1 | 0 | 1 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
