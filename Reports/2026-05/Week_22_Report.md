@@ -21,7 +21,7 @@
 | 2026-06-01 09:09:44 | CRX | Steps | 0.00 | 44,238 | 0 | fitness app | [View](https://drive.google.com/open?id=1typ8zV8VgOQsK7b-gPPC8--hoVQJQ2IU) | Verified |
 
 ---
-**Total Points Accumulated:** 23
+**Total Points Accumulated:** 22
 
 > Scoring is based on cumulative totals from Week 22 onwards per pledged category.
 
@@ -31,7 +31,7 @@
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| CRX | 94,600 | 0.00 | 0.00 | 5 | 0 | 0 | 5 |
+| CRX | 94,600 | 0.00 | 0.00 | 4 | 0 | 0 | 4 |
 | Jeremy | 0 | 33.80 | 0.00 | 0 | 4 | 0 | 4 |
 | Kai Fong | 0 | 17.28 | 0.00 | 0 | 3 | 0 | 3 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
@@ -56,4 +56,4 @@
 - **Jeremy (5/30 20:44:11):** OCR extraction: 50:46 duration at pace 5:56/km = ~8.56 km Run. Qualifies for Tier 2 (≥7.0 km). App identified: Unknown (Approved).
 - **Jeremy (5/31 20:24:34):** OCR extraction: 7.07 km Run (pace 5:57/km = 10.05 km/h). Qualifies for Tier 2 (≥7.0 km). App identified: Unknown (Approved).
 - **Ron (5/31 21:59:28):** OCR extraction: 60,056 steps. Qualifies for Tier 2 (≥55,000). Pledge = Unknown (first entry). App identified: Unknown (Approved).
-- **CRX (6/1 09:09:44):** OCR extraction: 44,238 steps. Combined with 5/25 entry (50,362 steps) = 94,600 total. Qualifies for Tier 5 (≥95,000). Pledge = Steps. App identified: fitness app (Approved).
+- **CRX (6/1 09:09:44):** OCR extraction: 44,238 steps. Combined with 5/25 entry (50,362 steps) = 94,600 total. Qualifies for Tier 4 (≥75,000). Pledge = Steps. App identified: fitness app (Approved).
