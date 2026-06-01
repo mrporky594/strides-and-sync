@@ -21,7 +21,7 @@
 | 2026-06-01 09:09:44 | CRX | Steps | 0.00 | 44,238 | 0 | fitness app | [View](https://drive.google.com/open?id=1typ8zV8VgOQsK7b-gPPC8--hoVQJQ2IU) | Verified |
 
 ---
-**Total Points Accumulated:** 25
+**Total Points Accumulated:** 20
 
 > Scoring is based on cumulative totals from Week 22 onwards per pledged category.
 
