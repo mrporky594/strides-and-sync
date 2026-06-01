@@ -17,9 +17,10 @@
 | 2026-05-30 10:55:11 | Kelvin | Run/Jog | 8.16 | 0 | 0 | Southwest | [View](https://drive.google.com/open?id=1iLc6EhH2km_-Tm6tUfD9PXxX4k6TAo25) | Verified |
 | 2026-05-30 20:44:11 | Jeremy | Run/Jog | 8.56 | 0 | 0 | Unknown | [View](https://drive.google.com/open?id=1lSlJ2CaFMsK6kvPOBJTPTFykKa5F8rNG) | Verified |
 | 2026-05-31 20:24:34 | Jeremy | Run/Jog | 7.07 | 0 | 0 | N/A | [View](https://drive.google.com/open?id=1zZJ1J7SCVAo8nsdzTGeoNOtj0zebsI2_) | Verified |
+| 2026-05-31 21:59:28 | Ron | Steps | 0.00 | 60,056 | 0 | Unknown | [View](https://drive.google.com/open?id=1jAj8tBZezD0qD_ATFuL1Gbx8Odn47SoW) | Verified |
 
 ---
-**Total Points Accumulated:** 16
+**Total Points Accumulated:** 18
 
 > Scoring is based on cumulative totals from Week 22 onwards per pledged category.
 
@@ -35,7 +36,7 @@
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Kelvin | 0 | 30.85 | 0.00 | 0 | 4 | 0 | 4 |
-| Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Ron | 60,056 | 0.00 | 0.00 | 2 | 0 | 0 | 2 |
 | Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 
 **Pledges:** CRX → Steps | Jeremy → Run/Jog | Kai Fong → Distance (Run/Jog) | Kelvin → Distance (Run/Jog)
@@ -53,3 +54,4 @@
 - **Kelvin (5/30 10:55:11):** Strava entry: 8.16 km Run (pace ~5:54/km = 10.16 km/h). Qualifies for Tier 2 (≥7.0 km). App identified: Southwest (Approved).
 - **Jeremy (5/30 20:44:11):** OCR extraction: 50:46 duration at pace 5:56/km = ~8.56 km Run. Qualifies for Tier 2 (≥7.0 km). App identified: Unknown (Approved).
 - **Jeremy (5/31 20:24:34):** OCR extraction: 7.07 km Run (pace 5:57/km = 10.05 km/h). Qualifies for Tier 2 (≥7.0 km). App identified: Unknown (Approved).
+- **Ron (5/31 21:59:28):** OCR extraction: 60,056 steps. Qualifies for Tier 2 (≥55,000). Pledge = Unknown (first entry). App identified: Unknown (Approved).
