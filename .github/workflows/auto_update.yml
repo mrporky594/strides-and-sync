@@ -2,8 +2,13 @@ name: Auto-Update Strides & Sync Scores
 
 on:
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 2 * * *' # Runs daily at 2:00 AM UTC
   workflow_dispatch:
+
+# Prevents multiple runs from overlapping if one gets stuck
+concurrency:
+  group: auto-update-scores
+  cancel-in-progress: false
 
 jobs:
   update-scores:
@@ -22,18 +27,53 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+          cache: 'pip' # Automatically caches pip dependencies for faster runs
 
-      - name: Install dependencies
+      - name: Install System Dependencies (Tesseract & Poppler for OCR)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-eng poppler-utils
+
+      - name: Install Python Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests openpyxl bs4 mistune pillow
+          # Added httpx, pytesseract, pdf2image, and playwright
+          pip install requests httpx openpyxl bs4 mistune pillow pytesseract pdf2image playwright
+          # Install Playwright browsers and OS dependencies
+          playwright install --with-deps chromium
 
       - name: Run Auto-Scrape & Compile Script
+        id: run_script
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
         run: |
           set -e
           python scripts/auto_update.py
+        continue-on-error: true # Allows the workflow to proceed to the notification step
+
+      - name: Upload Artifacts on Failure
+        if: steps.run_script.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: failure-debug-data
+          path: |
+            logs/
+            *.log
+            output/
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - name: Notify on Failure (Webhook)
+        if: steps.run_script.outcome == 'failure'
+        run: |
+          curl -H "Content-Type: application/json" \
+               -d '{"content": "⚠️ **Auto-Update Workflow Failed**\nRepo: ${{ github.repository }}\nCheck logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+               ${{ secrets.WEBHOOK_URL }}
+        continue-on-error: true # Don't fail the job just because the notification failed
+
+      - name: Fail job if script failed
+        if: steps.run_script.outcome == 'failure'
+        run: exit 1
 
       - name: Commit and Push Changes
         run: |
@@ -41,7 +81,6 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           git add -A
-
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
