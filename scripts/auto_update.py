@@ -344,6 +344,102 @@ def run_firecrawl_ocr(pdf_path):
         except Exception as e:
             return {"success": False, "error": str(e)}
 
+
+def run_tesseract_ocr(image_path):
+    """Fallback OCR using pytesseract when Firecrawl credits are exhausted.
+    Accepts a .jpg or .pdf path; extracts text then parses structured fields."""
+    try:
+        import pytesseract
+        pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    except ImportError:
+        return {"success": False, "error": "pytesseract not installed. Run: pip install pytesseract"}
+
+    try:
+        img = Image.open(image_path.replace('.pdf', '.jpg'))
+        text = pytesseract.image_to_string(img)
+    except Exception as e:
+        return {"success": False, "error": f"Tesseract OCR failed: {e}"}
+
+    # Parse structured fields from raw OCR text
+    text_lower = text.lower()
+
+    # Detect app
+    app = "Unknown"
+    if "strava" in text_lower:
+        app = "Strava"
+    elif "garmin" in text_lower or "connect" in text_lower:
+        app = "Garmin"
+    elif "fitbit" in text_lower:
+        app = "Fitbit"
+    elif "healthy 365" in text_lower or "healthy365" in text_lower:
+        app = "Healthy 365"
+    elif "google fit" in text_lower or "fit.google" in text_lower:
+        app = "Google Fit"
+
+    # Detect category
+    category = "Walking"
+    if "run" in text_lower or "jog" in text_lower:
+        category = "Running"
+    elif "cycl" in text_lower or "bike" in text_lower or "ride" in text_lower:
+        category = "Cycling"
+    elif "step" in text_lower:
+        category = "Steps"
+
+    # Extract distance
+    dist_match = re.search(r'([\d]+[.,]\d+)\s*(km|mi|miles?|kilometers?)', text, re.IGNORECASE)
+    distance = float(dist_match.group(1).replace(',', '.')) if dist_match else 0.0
+    distance_unit = dist_match.group(2).lower() if dist_match else "km"
+
+    # Extract steps
+    steps_match = re.search(r'([\d,]+)\s*steps', text, re.IGNORECASE)
+    steps = int(steps_match.group(1).replace(',', '')) if steps_match else 0
+
+    # Extract duration (formats: 27:50, 1:20:00, 27m 50s, 1h 20m)
+    dur_match = re.search(r'(\d{1,2}:\d{2}:\d{2}|\d{1,2}:\d{2}|\d+h\s*\d+m|\d+m\s*\d+s)', text, re.IGNORECASE)
+    duration = dur_match.group(0) if dur_match else ""
+
+    # Extract pace
+    pace_match = re.search(r"(\d{1,2}:\d{2})\s*/\s*(km|mi)", text, re.IGNORECASE)
+    if not pace_match:
+        pace_match = re.search(r"([\d.]+)\s*km/h", text, re.IGNORECASE)
+    pace = pace_match.group(0) if pace_match else ""
+
+    return {
+        "success": True,
+        "data": {
+            "json": {
+                "category": category,
+                "distance": distance,
+                "distance_unit": distance_unit,
+                "steps": steps,
+                "duration": duration,
+                "pace": pace,
+                "app": app
+            }
+        }
+    }
+
+def scrape_google_sheet_csv(sheet_id="1NdwkcROXpgWg9hJAPNd1qC6SeGnexH63Y9Qa9KkjkLc", gid="0"):
+    """Fallback: fetch Google Sheet as CSV export (no API key needed for public sheets)."""
+    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}"
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+    try:
+        with urllib.request.urlopen(req, context=ctx) as response:
+            raw = response.read().decode("utf-8")
+        reader = csv.DictReader(raw.splitlines())
+        rows = []
+        for r in reader:
+            ts = r.get("Timestamp") or r.get("timestamp")
+            prof = r.get("Profile") or r.get("Name") or r.get("name")
+            img = r.get("Image Link") or r.get("image_link") or r.get("Link")
+            if ts:
+                rows.append({"Timestamp": ts, "Profile": prof, "Image Link": img})
+        return rows
+    except Exception as e:
+        print(f"Google Sheet CSV fallback failed: {e}")
+        return None
+
+
 def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data):
     existing_rows = []
     existing_notes = []
@@ -502,45 +598,48 @@ def main():
                 if row:
                     processed_timestamps.add(row[0])
                     
-    # Scrape Google Sheet
-    headers = {
-        "Authorization": f"Bearer {FIRECRAWL_API_KEY}",
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "url": "https://docs.google.com/spreadsheets/d/1NdwkcROXpgWg9hJAPNd1qC6SeGnexH63Y9Qa9KkjkLc/edit?usp=sharing",
-        "formats": ["json"],
-        "jsonOptions": {
-            "prompt": "Extract the rows from the 'Form Responses 1' tab. Each row must include Timestamp, Profile, and Image Link."
-        },
-        "maxAge": 0
-    }
-    
-    print("Scraping Google Sheet via Firecrawl...")
-    req = urllib.request.Request(SCRAPE_URL, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
-    try:
-        with urllib.request.urlopen(req, context=ctx) as response:
-            resp_data = response.read().decode("utf-8")
-            parsed = json.loads(resp_data)
-            
-            if not parsed.get("success"):
-                print("Failed to scrape Google Sheet:", parsed)
-                return
+    # Scrape Google Sheet — try Firecrawl first, fall back to direct CSV export
+    rows = None
+    if FIRECRAWL_API_KEY:
+        headers = {
+            "Authorization": f"Bearer {FIRECRAWL_API_KEY}",
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "url": "https://docs.google.com/spreadsheets/d/1NdwkcROXpgWg9hJAPNd1qC6SeGnexH63Y9Qa9KkjkLc/edit?usp=sharing",
+            "formats": ["json"],
+            "jsonOptions": {
+                "prompt": "Extract the rows from the 'Form Responses 1' tab. Each row must include Timestamp, Profile, and Image Link."
+            },
+            "maxAge": 0
+        }
+        
+        print("Scraping Google Sheet via Firecrawl...")
+        req = urllib.request.Request(SCRAPE_URL, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
+        try:
+            with urllib.request.urlopen(req, context=ctx) as response:
+                resp_data = response.read().decode("utf-8")
+                parsed = json.loads(resp_data)
                 
-            raw_json = parsed.get("data", {}).get("json", [])
-            # The structure might vary, let's normalize it
-            if isinstance(raw_json, dict) and "rows" in raw_json:
-                rows = raw_json["rows"]
-            elif isinstance(raw_json, dict) and "form_responses" in raw_json:
-                rows = raw_json["form_responses"]
-            elif isinstance(raw_json, list):
-                rows = raw_json
-            else:
-                rows = []
-                
-    except Exception as e:
-        print("Failed to contact Firecrawl API:", e)
-        return
+                if parsed.get("success"):
+                    raw_json = parsed.get("data", {}).get("json", [])
+                    if isinstance(raw_json, dict) and "rows" in raw_json:
+                        rows = raw_json["rows"]
+                    elif isinstance(raw_json, dict) and "form_responses" in raw_json:
+                        rows = raw_json["form_responses"]
+                    elif isinstance(raw_json, list):
+                        rows = raw_json
+                else:
+                    print("Firecrawl scrape failed:", parsed.get("error", "unknown"))
+        except Exception as e:
+            print(f"Firecrawl API error: {e}")
+
+    if rows is None:
+        print("Falling back to direct Google Sheet CSV export...")
+        rows = scrape_google_sheet_csv()
+        if rows is None:
+            print("All scraping methods failed. Exiting.")
+            return
         
     print(f"Scraped {len(rows)} responses.")
     
@@ -596,11 +695,21 @@ def main():
             if not convert_jpg_to_pdf(jpg_path, pdf_path):
                 continue
                 
-            # Perform OCR Structured Parse
-            print(f"Calling Firecrawl OCR parse for {profile}...")
-            ocr_res = run_firecrawl_ocr(pdf_path)
+            # Perform OCR — try Firecrawl first, fall back to Tesseract
+            ocr_res = None
+            if FIRECRAWL_API_KEY:
+                print(f"Calling Firecrawl OCR parse for {profile}...")
+                ocr_res = run_firecrawl_ocr(pdf_path)
+                if not ocr_res.get("success"):
+                    print(f"Firecrawl OCR failed: {ocr_res.get('error', 'unknown')}. Trying Tesseract fallback...")
+                    ocr_res = None
+
+            if ocr_res is None:
+                print(f"Using Tesseract OCR for {profile}...")
+                ocr_res = run_tesseract_ocr(jpg_path)
+
             if not ocr_res.get("success"):
-                print(f"Firecrawl parse failed for {profile}: {ocr_res}")
+                print(f"All OCR methods failed for {profile}: {ocr_res}")
                 continue
                 
             info = ocr_res.get("data", {}).get("json", {})

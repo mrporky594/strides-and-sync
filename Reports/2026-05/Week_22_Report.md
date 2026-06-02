@@ -19,9 +19,11 @@
 | 2026-05-31 20:24:34 | Jeremy | Run/Jog | 7.07 | 0 | 0 | N/A | [View](https://drive.google.com/open?id=1zZJ1J7SCVAo8nsdzTGeoNOtj0zebsI2_) | Verified |
 | 2026-05-31 21:59:28 | Ron | Steps | 0.00 | 60,056 | 0 | Unknown | [View](https://drive.google.com/open?id=1jAj8tBZezD0qD_ATFuL1Gbx8Odn47SoW) | Verified |
 | 2026-06-01 09:09:44 | CRX | Steps | 0.00 | 44,238 | 0 | fitness app | [View](https://drive.google.com/open?id=1typ8zV8VgOQsK7b-gPPC8--hoVQJQ2IU) | Verified |
+| 2026-06-02 15:45:53 | Surya | Steps | 0.00 | 51,942 | 0 | Google Fit | [View](https://drive.google.com/open?id=1OS-fTfgDb5ajNQ0lmfomC-UYiCDm0RWR) | Verified |
+| 2026-06-02 15:46:13 | Chee | Steps | 0.00 | 69,621 | 0 | Healthy 365 | [View](https://drive.google.com/open?id=1oiPIvWpnMqaSyZ2oG2E8ox3RQVj2B73O) | Verified |
 
 ---
-**Total Points Accumulated:** 20
+**Total Points Accumulated:** 24
 
 > Scoring is based on cumulative totals from Week 22 onwards per pledged category.
 
@@ -34,13 +36,13 @@
 | CRX | 94,600 | 0.00 | 0.00 | 4 | 0 | 0 | 4 |
 | Jeremy | 0 | 33.80 | 0.00 | 0 | 5 | 0 | 5 |
 | Kai Fong | 0 | 17.28 | 0.00 | 0 | 4 | 0 | 4 |
-| Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Chee | 69,621 | 0.00 | 0.00 | 3 | 0 | 0 | 3 |
+| Surya | 51,942 | 0.00 | 0.00 | 1 | 0 | 0 | 1 |
 | Kelvin | 0 | 30.85 | 0.00 | 0 | 5 | 0 | 5 |
 | Ron | 60,056 | 0.00 | 0.00 | 2 | 0 | 0 | 2 |
 | Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 
-**Pledges:** CRX → Steps | Jeremy → Run/Jog | Kai Fong → Distance (Run/Jog) | Kelvin → Distance (Run/Jog)
+**Pledges:** CRX → Steps | Jeremy → Distance (Run/Jog) | Kai Fong → Distance (Run/Jog) | Chee → Steps | Surya → Steps | Kelvin → Distance (Run/Jog) | Ron → Steps
 
 ---
 
@@ -57,3 +59,5 @@
 - **Jeremy (5/31 20:24:34):** OCR extraction: 7.07 km Run (pace 5:57/km = 10.05 km/h). Qualifies for Tier 2 (≥7.0 km). App identified: Unknown (Approved).
 - **Ron (5/31 21:59:28):** OCR extraction: 60,056 steps. Qualifies for Tier 2 (≥55,000). Pledge = Unknown (first entry). App identified: Unknown (Approved).
 - **CRX (6/1 09:09:44):** OCR extraction: 44,238 steps. Combined with 5/25 entry (50,362 steps) = 94,600 total. Qualifies for Tier 4 (≥75,000). Pledge = Steps. App identified: fitness app (Approved).
+- **Surya (6/2 15:45:53):** Google Fit weekly view (24-30 May): 51,942 steps. Qualifies for Tier 1 (≥45,000). Pledge = Steps. App identified: Google Fit (Approved).
+- **Chee (6/2 15:46:13):** Healthy 365 weekly chart (week of 25 May): 69,621 steps. Qualifies for Tier 3 (≥65,000). Pledge = Steps. App identified: Healthy 365 (Approved).
