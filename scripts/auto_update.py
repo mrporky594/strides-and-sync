@@ -350,7 +350,8 @@ def run_tesseract_ocr(image_path):
     Accepts a .jpg or .pdf path; extracts text then parses structured fields."""
     try:
         import pytesseract
-        pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+        if os.name == 'nt':
+            pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
     except ImportError:
         return {"success": False, "error": "pytesseract not installed. Run: pip install pytesseract"}
 
