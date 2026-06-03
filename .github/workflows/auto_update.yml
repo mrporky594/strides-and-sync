@@ -1,8 +1,6 @@
 name: Auto-Update Strides & Sync Scores
 
 on:
-  push:
-    branches: [ main ]
   schedule:
     - cron: '0 2 * * *' # Runs daily at 2:00 AM UTC
   workflow_dispatch:
