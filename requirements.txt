@@ -1,0 +1,9 @@
+requests
+httpx
+openpyxl
+beautifulsoup4
+mistune
+Pillow
+pytesseract
+pdf2image
+playwright

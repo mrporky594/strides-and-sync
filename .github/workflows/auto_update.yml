@@ -37,8 +37,7 @@ jobs:
       - name: Install Python Dependencies
         run: |
           python -m pip install --upgrade pip
-          # Added httpx, pytesseract, pdf2image, and playwright
-          pip install requests httpx openpyxl bs4 mistune pillow pytesseract pdf2image playwright
+          pip install -r requirements.txt
           # Install Playwright browsers and OS dependencies
           playwright install --with-deps chromium
 
