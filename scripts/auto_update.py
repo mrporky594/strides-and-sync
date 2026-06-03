@@ -419,9 +419,11 @@ def run_tesseract_ocr(image_path):
         }
     }
 
-def scrape_google_sheet_csv(sheet_id="1NdwkcROXpgWg9hJAPNd1qC6SeGnexH63Y9Qa9KkjkLc", gid="0"):
+def scrape_google_sheet_csv(sheet_id="1NdwkcROXpgWg9hJAPNd1qC6SeGnexH63Y9Qa9KkjkLc", gid=None):
     """Fallback: fetch Google Sheet as CSV export (no API key needed for public sheets)."""
-    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}"
+    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
+    if gid is not None:
+        url += f"&gid={gid}"
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
     try:
         with urllib.request.urlopen(req, context=ctx) as response:
@@ -486,7 +488,6 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
             existing_notes.append(note_line)
     
     existing_rows.sort(key=lambda x: x["timestamp"])
-    total_points = sum(r["points"] for r in existing_rows)
     
     new_content = []
     new_content.append(f"# Strides in Sync 2026 - Week {week_num} Report\n")
@@ -498,9 +499,6 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
     for r in existing_rows:
         new_content.append(f"| {r['timestamp']} | {r['profile']} | {r['category']} | {r['distance_km']:.2f} | {r['steps']:,} | {r['points']} | {r['app']} | {r['image_link']} | {r['status']} |")
     
-    new_content.append("\n---")
-    new_content.append(f"**Total Points Accumulated:** {total_points}\n")
-
     # Determine pledges for the month
     # Write report first so determine_pledges can read it
     dirname = os.path.dirname(report_path)
@@ -557,15 +555,22 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
         member_pts[name] = {'steps_pts': s_pts, 'run_pts': r_pts, 'cycle_pts': c_pts,
                             'total': s_pts + r_pts + c_pts}
 
+    total_points = sum(member_pts[name]['total'] for name in MEMBER_ORDER)
+
+    final_content = []
+    final_content.extend(new_content)
+    final_content.append("\n---")
+    final_content.append(f"**Total Points Accumulated:** {total_points}\n")
+
     month_name = datetime.datetime.strptime(month_dir, "%Y-%m").strftime("%B %Y")
-    new_content.append(f"## Month-to-Date Cumulative Summary ({month_name} — Through Week {week_num})\n")
-    new_content.append("> **Scoring method:** Cumulative month-to-date total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring.\n")
-    new_content.append("| Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |")
-    new_content.append("| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
+    final_content.append(f"## Month-to-Date Cumulative Summary ({month_name} — Through Week {week_num})\n")
+    final_content.append("> **Scoring method:** Cumulative month-to-date total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring.\n")
+    final_content.append("| Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |")
+    final_content.append("| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
     for name in MEMBER_ORDER:
         d = member_cum[name]
         p = member_pts[name]
-        new_content.append(f"| {name} | {d['steps']:,} | {d['run_dist']:.2f} | {d['cycle_dist']:.2f} | {p['steps_pts']} | {p['run_pts']} | {p['cycle_pts']} | {p['total']} |")
+        final_content.append(f"| {name} | {d['steps']:,} | {d['run_dist']:.2f} | {d['cycle_dist']:.2f} | {p['steps_pts']} | {p['run_pts']} | {p['cycle_pts']} | {p['total']} |")
 
     # Pledge summary line
     pledge_parts = []
@@ -573,16 +578,16 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
         if name in pledges:
             pledge_parts.append(f"{name} → {pledges[name]}")
     if pledge_parts:
-        new_content.append(f"\n**Pledges:** {' | '.join(pledge_parts)}")
+        final_content.append(f"\n**Pledges:** {' | '.join(pledge_parts)}")
 
-    new_content.append("\n---\n")
-    new_content.append("**Notes:**")
+    final_content.append("\n---\n")
+    final_content.append("**Notes:**")
     for n in existing_notes:
-        new_content.append(n)
+        final_content.append(n)
     
-    new_content_str = '\n'.join(new_content) + '\n'
+    final_content_str = '\n'.join(final_content) + '\n'
     with open(report_path, 'w', encoding='utf-8') as f:
-        f.write(new_content_str)
+        f.write(final_content_str)
     print(f"Updated report: {report_path}")
 
 def main():

@@ -9,28 +9,29 @@
 | 2026-06-01 14:34:48 | Jeremy | Run/Jog | 10.97 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1XRKWa7f63so26C6bZpHGJpaLhSAeaNLI) | Verified |
 | 2026-06-02 19:19:37 | Jeremy | Run/Jog | 7.23 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1Uv3ni9N1UYTWeoT5px8xTrz7mgnJoY-U) | Verified |
 | 2026-06-02 20:32:59 | CRX | Run/Jog | 3.52 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1D4Q7g3ZnwFLi01vc3U25wUmTZ6ZKDt32) | Verified |
+| 6/3/2026 18:46:11 | Kai Fong | Run/Jog | 5.77 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1aHv1RE6EtW1NstbrYQTmYxF5rqFRezHc) | Verified |
+| 6/3/2026 18:54:32 | Jeremy | Run/Jog | 7.24 | 0 | 2 | Strava | [View](https://drive.google.com/open?id=1R1E4rk1If-cXVECCDNyaU6wG51GW6DTo) | Flagged |
+| 6/3/2026 18:59:20 | Kelvin | Run/Jog | 10.06 | 0 | 3 | Strava | [View](https://drive.google.com/open?id=1Jy83RxjVNZvVHOMP2a3pnGvz1U6gB4t1) | Verified |
 
 ---
-**Total Points Accumulated:** 8
+**Total Points Accumulated:** 12
 
-> Scoring is based on cumulative totals from Week 22 onwards per pledged category.
+## Month-to-Date Cumulative Summary (June 2026 — Through Week 23)
 
-## Week 23 Cumulative Summary (June 2026 — Through Week 23)
-
-> **Scoring method:** Weekly cumulative total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring. Cumulative resets each week.
+> **Scoring method:** Cumulative month-to-date total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring.
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| CRX | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Jeremy | 0 | 18.20 | 0.00 | 0 | 4 | 0 | 4 |
-| Kai Fong | 0 | 6.31 | 0.00 | 0 | 1 | 0 | 1 |
+| CRX | 0 | 3.52 | 0.00 | 0 | 1 | 0 | 1 |
+| Jeremy | 0 | 25.44 | 0.00 | 0 | 4 | 0 | 4 |
+| Kai Fong | 0 | 12.08 | 0.00 | 0 | 3 | 0 | 3 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Kelvin | 0 | 10.44 | 0.00 | 0 | 3 | 0 | 3 |
+| Kelvin | 0 | 20.50 | 0.00 | 0 | 4 | 0 | 4 |
 | Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Chun Chieh | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 
-**Pledges:** CRX → Steps | Jeremy → Distance (Run/Jog) | Kai Fong → Distance (Run/Jog) | Chee → Steps | Surya → Steps | Kelvin → Distance (Run/Jog) | Ron → Steps
+**Pledges:** CRX → Distance | Jeremy → Distance | Kai Fong → Distance | Kelvin → Distance
 
 ---
 
@@ -41,3 +42,6 @@
 - **Jeremy (6/2 19:19:37):** Strava: 7.23 km Evening Run (pace 5:48/km = 10.34 km/h). 2nd fastest 5K. App identified: Strava (Approved).
 - **CRX (6/1 09:09:44):** OCR extraction: 44,238 steps. Below Tier 1 (45,000). Pledge = Steps. App identified: fitness app (Approved).
 - **CRX (6/2 20:32:59):** Strava: 3.52 km Evening Run (pace 5:24/km = 11.11 km/h). 19:00 moving time. Pledge = Steps; run not counted towards scoring. App identified: Strava (Approved).
+- **Kai Fong (18:46:11):** OCR extraction: 5.77 km Run (9.63 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
+- **Jeremy (18:54:32):** OCR extraction: 7.24 km Run (10.53 km/h). Qualifies for Tier 2 (7.0 km). Flagged: within 5% of Tier threshold. App identified: Strava (Approved).
+- **Kelvin (18:59:20):** OCR extraction: 10.06 km Run (9.65 km/h). Qualifies for Tier 3 (10.0 km). App identified: Strava (Approved).
