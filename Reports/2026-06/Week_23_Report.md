@@ -12,9 +12,9 @@
 | 6/3/2026 18:46:11 | Kai Fong | Run/Jog | 5.77 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1aHv1RE6EtW1NstbrYQTmYxF5rqFRezHc) | Verified |
 | 6/3/2026 18:54:32 | Jeremy | Run/Jog | 7.24 | 0 | 2 | Strava | [View](https://drive.google.com/open?id=1R1E4rk1If-cXVECCDNyaU6wG51GW6DTo) | Flagged |
 | 6/3/2026 18:59:20 | Kelvin | Run/Jog | 10.06 | 0 | 3 | Strava | [View](https://drive.google.com/open?id=1Jy83RxjVNZvVHOMP2a3pnGvz1U6gB4t1) | Verified |
-| 6/4/2026 19:03:19 | Jeremy | Run/Jog | 7.11 | 0 | 2 | Unknown | [View](https://drive.google.com/open?id=1HK2e2ZQhA5WZoXt13-g9dVE1ybfdGS3_) | Committee Approval Required |
-| 6/5/2026 15:56:04 | Chun Chieh | Run/Jog | 5.92 | 0 | 1 | Unknown | [View](https://drive.google.com/open?id=1Q9zUXLONTYDHfMtPO0rU9Pv6q9SQgzHN, https://drive.google.com/open?id=10L433gnJQHuEM7vGBbgb8gQpXSKHwotf, https://drive.google.com/open?id=16ucwKYvjDUAEkqXTJCHpZF44eb6sfeII) | Committee Approval Required |
-| 6/5/2026 18:50:18 | Jeremy | Run/Jog | 7.30 | 0 | 2 | Unknown | [View](https://drive.google.com/open?id=1zIiKlLFILDrMw8JojV6fVgReXRDLKUaT) | Committee Approval Required |
+| 6/4/2026 19:03:19 | Jeremy | Run/Jog | 7.11 | 0 | 2 | Strava | [View](https://drive.google.com/open?id=1HK2e2ZQhA5WZoXt13-g9dVE1ybfdGS3_) | Verified |
+| 6/5/2026 15:56:04 | Chun Chieh | Run/Jog | 5.92 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1Q9zUXLONTYDHfMtPO0rU9Pv6q9SQgzHN, https://drive.google.com/open?id=10L433gnJQHuEM7vGBbgb8gQpXSKHwotf, https://drive.google.com/open?id=16ucwKYvjDUAEkqXTJCHpZF44eb6sfeII) | Verified |
+| 6/5/2026 18:50:18 | Jeremy | Run/Jog | 7.30 | 0 | 2 | Strava | [View](https://drive.google.com/open?id=1zIiKlLFILDrMw8JojV6fVgReXRDLKUaT) | Verified |
 | 6/5/2026 18:50:59 | Kai Fong | Run/Jog | 5.58 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1cDMwKFDjgH4gfUSI7zuPRh_hAlsw9pf2) | Verified |
 
 ---
@@ -49,7 +49,7 @@
 - **Kai Fong (18:46:11):** OCR extraction: 5.77 km Run (9.63 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
 - **Jeremy (18:54:32):** OCR extraction: 7.24 km Run (10.53 km/h). Qualifies for Tier 2 (7.0 km). Flagged: within 5% of Tier threshold. App identified: Strava (Approved).
 - **Kelvin (18:59:20):** OCR extraction: 10.06 km Run (9.65 km/h). Qualifies for Tier 3 (10.0 km). App identified: Strava (Approved).
-- **Jeremy (19:03:19):** OCR extraction: 7.11 km Run (10.06 km/h). Qualifies for Tier 2 (7.0 km). Flagged: unapproved tracking application. App identified: Unknown (Unapproved).
-- **Chun Chieh (15:56:04):** OCR extraction: 5.92 km Run (6.88 km/h). Qualifies for Tier 1 (3.5 km). Flagged: unapproved tracking application. App identified: Unknown (Unapproved).
-- **Jeremy (18:50:18):** OCR extraction: 7.30 km Run (9.84 km/h). Qualifies for Tier 2 (7.0 km). Flagged: unapproved tracking application. App identified: Unknown (Unapproved).
+- **Jeremy (19:03:19):** OCR extraction: 7.11 km Run (10.06 km/h). Qualifies for Tier 2 (7.0 km). App identified: Strava (Approved).
+- **Chun Chieh (15:56:04):** OCR extraction: 5.92 km Run (pace 8:43/km = 6.88 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
+- **Jeremy (18:50:18):** OCR extraction: 7.30 km Run (9.84 km/h). Qualifies for Tier 2 (7.0 km). App identified: Strava (Approved).
 - **Kai Fong (18:50:59):** OCR extraction: 5.58 km Run (9.84 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
