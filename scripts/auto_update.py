@@ -432,10 +432,14 @@ def scrape_google_sheet_csv(sheet_id="1NdwkcROXpgWg9hJAPNd1qC6SeGnexH63Y9Qa9Kkjk
         reader = csv.DictReader(raw.splitlines())
         rows = []
         for r in reader:
+            # Handle various possible column names from the Google Form
             ts = r.get("Timestamp") or r.get("timestamp")
-            prof = r.get("Profile") or r.get("Name") or r.get("name")
-            img = r.get("Image Link") or r.get("image_link") or r.get("Link")
-            if ts:
+            prof = (r.get("Profile") or r.get("Name") or r.get("name")
+                    or r.get("Select your profile.") or r.get("Select your profile. "))
+            img = (r.get("Image Link") or r.get("image_link") or r.get("Link")
+                   or r.get("Upload a screenshot or image of the exercise session. ")
+                   or r.get("Upload a screenshot or image of the exercise session."))
+            if ts and prof:
                 rows.append({"Timestamp": ts, "Profile": prof, "Image Link": img})
         return rows
     except Exception as e:
@@ -685,7 +689,7 @@ def main():
             print(f"\nProcessing submission from {profile} at {ts}...")
             
             # Extract Drive ID
-            drive_id_match = re.search(r'(?:id=|\/d\/)([A-Za-z0-9_-]+)', img_link)
+            drive_id_match = re.search(r'(?:id=|\/d\/)([A-Za-z0-9_-]+)', img_link or '')
             if not drive_id_match:
                 print(f"Skipping submission due to invalid Drive link: {img_link}")
                 continue
