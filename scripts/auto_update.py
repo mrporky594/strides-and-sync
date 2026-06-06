@@ -608,9 +608,12 @@ def main():
                 if row:
                     processed_timestamps.add(row[0])
                     
-    # Scrape Google Sheet — try Firecrawl first, fall back to direct CSV export
+    # Scrape Google Sheet — always use CSV export (free, no credits)
     rows = None
-    if FIRECRAWL_API_KEY:
+    print("Scraping Google Sheet via CSV export...")
+    rows = scrape_google_sheet_csv()
+    if rows is None and FIRECRAWL_API_KEY:
+        # Only use Firecrawl as last resort for sheet scraping
         headers = {
             "Authorization": f"Bearer {FIRECRAWL_API_KEY}",
             "Content-Type": "application/json"
@@ -624,7 +627,7 @@ def main():
             "maxAge": 0
         }
         
-        print("Scraping Google Sheet via Firecrawl...")
+        print("CSV export failed. Trying Firecrawl...")
         req = urllib.request.Request(SCRAPE_URL, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
         try:
             with urllib.request.urlopen(req, context=ctx) as response:
@@ -645,11 +648,8 @@ def main():
             print(f"Firecrawl API error: {e}")
 
     if rows is None:
-        print("Falling back to direct Google Sheet CSV export...")
-        rows = scrape_google_sheet_csv()
-        if rows is None:
-            print("All scraping methods failed. Exiting.")
-            return
+        print("All scraping methods failed. Exiting.")
+        return
         
     print(f"Scraped {len(rows)} responses.")
     
@@ -705,18 +705,25 @@ def main():
             if not convert_jpg_to_pdf(jpg_path, pdf_path):
                 continue
                 
-            # Perform OCR — try Firecrawl first, fall back to Tesseract
-            ocr_res = None
-            if FIRECRAWL_API_KEY:
-                print(f"Calling Firecrawl OCR parse for {profile}...")
-                ocr_res = run_firecrawl_ocr(pdf_path)
-                if not ocr_res.get("success"):
-                    print(f"Firecrawl OCR failed: {ocr_res.get('error', 'unknown')}. Trying Tesseract fallback...")
-                    ocr_res = None
+            # Perform OCR — Tesseract first (free), Firecrawl only if key fields missing
+            print(f"Using Tesseract OCR for {profile}...")
+            ocr_res = run_tesseract_ocr(jpg_path)
 
-            if ocr_res is None:
-                print(f"Using Tesseract OCR for {profile}...")
-                ocr_res = run_tesseract_ocr(jpg_path)
+            # Check if Tesseract result is usable (has distance or steps)
+            if ocr_res.get("success"):
+                info_check = ocr_res.get("data", {}).get("json", {})
+                has_distance = float(info_check.get("distance") or 0) > 0
+                has_steps = int(info_check.get("steps") or 0) > 0
+                if not has_distance and not has_steps:
+                    # Tesseract couldn't extract key data — use Firecrawl
+                    if FIRECRAWL_API_KEY:
+                        print(f"Tesseract found no distance/steps. Calling Firecrawl OCR for {profile}...")
+                        fc_res = run_firecrawl_ocr(pdf_path)
+                        if fc_res.get("success"):
+                            ocr_res = fc_res
+            elif FIRECRAWL_API_KEY:
+                print(f"Tesseract failed. Calling Firecrawl OCR for {profile}...")
+                ocr_res = run_firecrawl_ocr(pdf_path)
 
             if not ocr_res.get("success"):
                 print(f"All OCR methods failed for {profile}: {ocr_res}")
