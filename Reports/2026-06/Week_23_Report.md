@@ -16,9 +16,10 @@
 | 6/5/2026 15:56:04 | Chun Chieh | Run/Jog | 5.92 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1Q9zUXLONTYDHfMtPO0rU9Pv6q9SQgzHN, https://drive.google.com/open?id=10L433gnJQHuEM7vGBbgb8gQpXSKHwotf, https://drive.google.com/open?id=16ucwKYvjDUAEkqXTJCHpZF44eb6sfeII) | Verified |
 | 6/5/2026 18:50:18 | Jeremy | Run/Jog | 7.30 | 0 | 2 | Strava | [View](https://drive.google.com/open?id=1zIiKlLFILDrMw8JojV6fVgReXRDLKUaT) | Verified |
 | 6/5/2026 18:50:59 | Kai Fong | Run/Jog | 5.58 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1cDMwKFDjgH4gfUSI7zuPRh_hAlsw9pf2) | Verified |
+| 6/6/2026 8:36:45 | Kelvin | Run/Jog | 10.25 | 0 | 3 | Unknown | [View](https://drive.google.com/open?id=1L_YDRysGU4DfdhgvJNOtJSGFbGeTki1P) | Committee Approval Required |
 
 ---
-**Total Points Accumulated:** 15
+**Total Points Accumulated:** 16
 
 ## Month-to-Date Cumulative Summary (June 2026 — Through Week 23)
 
@@ -31,7 +32,7 @@
 | Kai Fong | 0 | 17.66 | 0.00 | 0 | 4 | 0 | 4 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Kelvin | 0 | 20.50 | 0.00 | 0 | 4 | 0 | 4 |
+| Kelvin | 0 | 30.75 | 0.00 | 0 | 5 | 0 | 5 |
 | Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Chun Chieh | 0 | 5.92 | 0.00 | 0 | 1 | 0 | 1 |
 
@@ -53,3 +54,4 @@
 - **Chun Chieh (15:56:04):** OCR extraction: 5.92 km Run (pace 8:43/km = 6.88 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
 - **Jeremy (18:50:18):** OCR extraction: 7.30 km Run (9.84 km/h). Qualifies for Tier 2 (7.0 km). App identified: Strava (Approved).
 - **Kai Fong (18:50:59):** OCR extraction: 5.58 km Run (9.84 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
+- **Kelvin (8:36:45):** OCR extraction: 10.25 km Run (9.65 km/h). Qualifies for Tier 3 (10.0 km). Flagged: unapproved tracking application. App identified: Unknown (Unapproved).
