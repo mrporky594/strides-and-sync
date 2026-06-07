@@ -5,6 +5,7 @@
 | Date/Timestamp | Profile | Category | Distance (km) | Steps | Points | App | Image Link | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-06-01 08:14:08 | Kai Fong | Run/Jog | 6.31 | 0 | 0 | Strava App | [View](https://drive.google.com/open?id=10bvwHdo8xnb015s7k52kVtcgYjbVrS4V) | Verified |
+| 2026-06-01 09:09:44 | CRX | Steps | 0.00 | 44,238 | 0 | Healthy 365 | [View](https://drive.google.com/open?id=1typ8zV8VgOQsK7b-gPPC8--hoVQJQ2IU) | Verified |
 | 2026-06-01 11:41:23 | Kelvin | Run/Jog | 10.44 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1roMqbpkjM32IL2l0MVz0fu3MftjdWV3h) | Verified |
 | 2026-06-01 14:34:48 | Jeremy | Run/Jog | 10.97 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1XRKWa7f63so26C6bZpHGJpaLhSAeaNLI) | Verified |
 | 2026-06-02 19:19:37 | Jeremy | Run/Jog | 7.23 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1Uv3ni9N1UYTWeoT5px8xTrz7mgnJoY-U) | Verified |
