@@ -25,9 +25,10 @@
 | 6/7/2026 19:14:51 | CRX | Run/Jog | 4.42 | 5,470 | 0 | Strava | [View](https://drive.google.com/open?id=1GqYnZowLb_zpDOMFmiVAI-goThfcOhh6) | Verified |
 | 6/7/2026 19:14:51 | CRX | Run/Jog | 4.01 | 3,398 | 0 | Strava | [View](https://drive.google.com/open?id=1dIsrILHjnqfzJaktbKAYviloTh3YfIPH) | Verified |
 | 6/7/2026 19:14:51 | CRX | Run/Jog | 4.75 | 6,624 | 0 | Strava | [View](https://drive.google.com/open?id=1ociP11PUhx7r8uV-ySO9Fcv-1EGbJHuv) | Verified |
+| 6/7/2026 21:02:41 | Chee | Steps | 0.00 | 52,564 | 0 | Healthy 365 | [View](https://drive.google.com/open?id=1zkOzwDN5jW3D2y2wU_jAk5tiHmeY9TtK) | Verified |
 
 ---
-**Total Points Accumulated:** 23
+**Total Points Accumulated:** 24
 
 ## Month-to-Date Cumulative Summary (June 2026 — Through Week 23)
 
@@ -38,7 +39,7 @@
 | CRX | 67,274 | 0.00 | 0.00 | 3 | 0 | 0 | 3 |
 | Jeremy | 0 | 54.69 | 0.00 | 0 | 6 | 0 | 6 |
 | Kai Fong | 0 | 17.66 | 0.00 | 0 | 4 | 0 | 4 |
-| Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Chee | 52,564 | 0.00 | 0.00 | 1 | 0 | 0 | 1 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Kelvin | 0 | 41.10 | 0.00 | 0 | 6 | 0 | 6 |
 | Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
@@ -68,3 +69,4 @@
 - **Chun Chieh (6/7 17:27:12):** Strava: 16.44 km Morning Walk in Tokyo. 25,078 steps. Qualifies for Tier 4 (≥15.0 km). App identified: Strava (Approved).
 - **Jeremy (6/7 18:45:45):** Strava: 7.38 km Afternoon Run (pace 6:14/km = 9.65 km/h). 46:04. App identified: Strava (Approved).
 - **CRX (6/7 19:14:51):** Strava: 4 activities submitted — Afternoon Run 5.51km (4,532 steps), Morning Walk 4.42km (5,470 steps), Evening Run 4.01km (3,398 steps), Walk 4.75km (6,624 steps). Total new steps: 20,024. June cumulative: 67,274 steps. Qualifies for Tier 3 (≥65,000). App identified: Strava (Approved).
+- **Chee (6/7 21:02:41):** Healthy 365 weekly chart (week of 1 Jun): 52,564 steps. Qualifies for Tier 1 (≥45,000). Pledge = Steps. App identified: Healthy 365 (Approved).
