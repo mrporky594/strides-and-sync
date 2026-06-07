@@ -19,9 +19,11 @@
 | 6/6/2026 18:18:05 | Jeremy | Run/Jog | 7.46 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=107aq9btc109G2WY-1l5-hQaVrwAjqJHv) | Verified |
 | 6/6/2026 8:36:45 | Kelvin | Run/Jog | 10.25 | 0 | 3 | Strava | [View](https://drive.google.com/open?id=1L_YDRysGU4DfdhgvJNOtJSGFbGeTki1P) | Verified |
 | 6/7/2026 12:17:03 | Kelvin | Run/Jog | 10.35 | 0 | 3 | Strava | [View](https://drive.google.com/open?id=1mG1iB0v1MqZpFwq7q1s7q0HE0bMl-EC2) | Verified |
+| 6/7/2026 17:27:12 | Chun Chieh | Run/Jog | 16.44 | 25,078 | 0 | Strava | [View](https://drive.google.com/open?id=1OVyShTGV0pUV_-gUo9jxz0hZsyLxYi6O) | Verified |
+| 6/7/2026 18:45:45 | Jeremy | Run/Jog | 7.38 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1e4BMFEhWSj6wEcviv3MBYKtrv70LsO3y) | Verified |
 
 ---
-**Total Points Accumulated:** 18
+**Total Points Accumulated:** 21
 
 ## Month-to-Date Cumulative Summary (June 2026 — Through Week 23)
 
@@ -30,13 +32,13 @@
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | CRX | 47,250 | 0.00 | 0.00 | 1 | 0 | 0 | 1 |
-| Jeremy | 0 | 47.31 | 0.00 | 0 | 6 | 0 | 6 |
+| Jeremy | 0 | 54.69 | 0.00 | 0 | 6 | 0 | 6 |
 | Kai Fong | 0 | 17.66 | 0.00 | 0 | 4 | 0 | 4 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Kelvin | 0 | 41.10 | 0.00 | 0 | 6 | 0 | 6 |
 | Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Chun Chieh | 0 | 5.92 | 0.00 | 0 | 1 | 0 | 1 |
+| Chun Chieh | 0 | 22.36 | 0.00 | 0 | 4 | 0 | 4 |
 
 **Pledges:** CRX → Steps | Jeremy → Distance (Run/Jog) | Kai Fong → Distance (Run/Jog) | Chee → Steps | Surya → Steps | Kelvin → Distance (Run/Jog) | Ron → Steps | Chun Chieh → Distance (Run/Jog)
 
@@ -59,3 +61,5 @@
 - **Kelvin (8:36:45):** OCR extraction: 10.25 km Run (pace 6:13/km = 9.65 km/h). Qualifies for Tier 3 (10.0 km). App identified: Strava (Approved).
 - **Jeremy (18:18:05):** Strava: 7.46 km Afternoon Run (pace 6:07/km = 9.81 km/h). 45m38s. App identified: Strava (Approved).
 - **Kelvin (12:17:03):** OCR extraction: 10.35 km Run (9.89 km/h). Qualifies for Tier 3 (10.0 km). App identified: Strava (Approved).
+- **Chun Chieh (6/7 17:27:12):** Strava: 16.44 km Morning Walk in Tokyo. 25,078 steps. Qualifies for Tier 4 (≥15.0 km). App identified: Strava (Approved).
+- **Jeremy (6/7 18:45:45):** Strava: 7.38 km Afternoon Run (pace 6:14/km = 9.65 km/h). 46:04. App identified: Strava (Approved).
