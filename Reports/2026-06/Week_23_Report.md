@@ -8,7 +8,7 @@
 | 2026-06-01 11:41:23 | Kelvin | Run/Jog | 10.44 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1roMqbpkjM32IL2l0MVz0fu3MftjdWV3h) | Verified |
 | 2026-06-01 14:34:48 | Jeremy | Run/Jog | 10.97 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1XRKWa7f63so26C6bZpHGJpaLhSAeaNLI) | Verified |
 | 2026-06-02 19:19:37 | Jeremy | Run/Jog | 7.23 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1Uv3ni9N1UYTWeoT5px8xTrz7mgnJoY-U) | Verified |
-| 2026-06-02 20:32:59 | CRX | Run/Jog | 3.52 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1D4Q7g3ZnwFLi01vc3U25wUmTZ6ZKDt32) | Verified |
+| 2026-06-02 20:32:59 | CRX | Run/Jog | 3.52 | 3,012 | 0 | Strava | [View](https://drive.google.com/open?id=1D4Q7g3ZnwFLi01vc3U25wUmTZ6ZKDt32) | Verified |
 | 6/3/2026 18:46:11 | Kai Fong | Run/Jog | 5.77 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1aHv1RE6EtW1NstbrYQTmYxF5rqFRezHc) | Verified |
 | 6/3/2026 18:54:32 | Jeremy | Run/Jog | 7.24 | 0 | 2 | Strava | [View](https://drive.google.com/open?id=1R1E4rk1If-cXVECCDNyaU6wG51GW6DTo) | Flagged |
 | 6/3/2026 18:59:20 | Kelvin | Run/Jog | 10.06 | 0 | 3 | Strava | [View](https://drive.google.com/open?id=1Jy83RxjVNZvVHOMP2a3pnGvz1U6gB4t1) | Verified |
@@ -21,7 +21,7 @@
 | 6/7/2026 12:17:03 | Kelvin | Run/Jog | 10.35 | 0 | 3 | Strava | [View](https://drive.google.com/open?id=1mG1iB0v1MqZpFwq7q1s7q0HE0bMl-EC2) | Verified |
 
 ---
-**Total Points Accumulated:** 17
+**Total Points Accumulated:** 18
 
 ## Month-to-Date Cumulative Summary (June 2026 — Through Week 23)
 
@@ -29,7 +29,7 @@
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| CRX | 44,238 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| CRX | 47,250 | 0.00 | 0.00 | 1 | 0 | 0 | 1 |
 | Jeremy | 0 | 47.31 | 0.00 | 0 | 6 | 0 | 6 |
 | Kai Fong | 0 | 17.66 | 0.00 | 0 | 4 | 0 | 4 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
