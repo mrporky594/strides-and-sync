@@ -16,9 +16,9 @@
 | 6/5/2026 15:56:04 | Chun Chieh | Run/Jog | 5.92 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1Q9zUXLONTYDHfMtPO0rU9Pv6q9SQgzHN, https://drive.google.com/open?id=10L433gnJQHuEM7vGBbgb8gQpXSKHwotf, https://drive.google.com/open?id=16ucwKYvjDUAEkqXTJCHpZF44eb6sfeII) | Verified |
 | 6/5/2026 18:50:18 | Jeremy | Run/Jog | 7.30 | 0 | 2 | Strava | [View](https://drive.google.com/open?id=1zIiKlLFILDrMw8JojV6fVgReXRDLKUaT) | Verified |
 | 6/5/2026 18:50:59 | Kai Fong | Run/Jog | 5.58 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1cDMwKFDjgH4gfUSI7zuPRh_hAlsw9pf2) | Verified |
-| 6/6/2026 18:18:05 | Jeremy | Run/Jog | 0.00 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=107aq9btc109G2WY-1l5-hQaVrwAjqJHv) | Verified |
+| 6/6/2026 18:18:05 | Jeremy | Run/Jog | 7.46 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=107aq9btc109G2WY-1l5-hQaVrwAjqJHv) | Verified |
 | 6/6/2026 8:36:45 | Kelvin | Run/Jog | 10.25 | 0 | 3 | Strava | [View](https://drive.google.com/open?id=1L_YDRysGU4DfdhgvJNOtJSGFbGeTki1P) | Verified |
-| 6/7/2026 12:17:03 | Kelvin | Run/Jog | 10.35 | 0 | 3 | Unknown | [View](https://drive.google.com/open?id=1mG1iB0v1MqZpFwq7q1s7q0HE0bMl-EC2) | Committee Approval Required |
+| 6/7/2026 12:17:03 | Kelvin | Run/Jog | 10.35 | 0 | 3 | Strava | [View](https://drive.google.com/open?id=1mG1iB0v1MqZpFwq7q1s7q0HE0bMl-EC2) | Verified |
 
 ---
 **Total Points Accumulated:** 17
@@ -29,8 +29,8 @@
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| CRX | 0 | 3.52 | 0.00 | 0 | 1 | 0 | 1 |
-| Jeremy | 0 | 39.85 | 0.00 | 0 | 5 | 0 | 5 |
+| CRX | 44,238 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Jeremy | 0 | 47.31 | 0.00 | 0 | 6 | 0 | 6 |
 | Kai Fong | 0 | 17.66 | 0.00 | 0 | 4 | 0 | 4 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
@@ -38,7 +38,7 @@
 | Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Chun Chieh | 0 | 5.92 | 0.00 | 0 | 1 | 0 | 1 |
 
-**Pledges:** CRX → Distance | Jeremy → Distance | Kai Fong → Distance | Kelvin → Distance | Chun Chieh → Distance
+**Pledges:** CRX → Steps | Jeremy → Distance (Run/Jog) | Kai Fong → Distance (Run/Jog) | Chee → Steps | Surya → Steps | Kelvin → Distance (Run/Jog) | Ron → Steps | Chun Chieh → Distance (Run/Jog)
 
 ---
 
@@ -57,5 +57,5 @@
 - **Jeremy (18:50:18):** OCR extraction: 7.30 km Run (9.84 km/h). Qualifies for Tier 2 (7.0 km). App identified: Strava (Approved).
 - **Kai Fong (18:50:59):** OCR extraction: 5.58 km Run (9.84 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
 - **Kelvin (8:36:45):** OCR extraction: 10.25 km Run (pace 6:13/km = 9.65 km/h). Qualifies for Tier 3 (10.0 km). App identified: Strava (Approved).
-- **Jeremy (18:18:05):** OCR extraction: 0.00 km Run (9.81 km/h). Below Tier 1 threshold or pace below 6 km/h. App identified: Strava (Approved).
-- **Kelvin (12:17:03):** OCR extraction: 10.35 km Run (9.89 km/h). Qualifies for Tier 3 (10.0 km). Flagged: unapproved tracking application. App identified: Unknown (Unapproved).
+- **Jeremy (18:18:05):** Strava: 7.46 km Afternoon Run (pace 6:07/km = 9.81 km/h). 45m38s. App identified: Strava (Approved).
+- **Kelvin (12:17:03):** OCR extraction: 10.35 km Run (9.89 km/h). Qualifies for Tier 3 (10.0 km). App identified: Strava (Approved).

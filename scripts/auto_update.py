@@ -217,16 +217,13 @@ def read_report_rows(report_path):
 SCORING_START_WEEK = 22
 
 def determine_pledges(week_num):
-    """Determine each member's pledge from their first activity from Week 22 onwards."""
-    month_dir = get_report_dir(week_num)
-    weeks_in_month = get_month_weeks(week_num)
+    """Determine each member's pledge from their first activity from Week 22 onwards (across all months)."""
     pledges = {}  # profile -> "Steps" or "Distance"
     
-    # Only consider weeks from scoring start onwards
-    scoring_weeks = [wk for wk in weeks_in_month if wk >= SCORING_START_WEEK]
-    
+    # Look at ALL weeks from scoring start up to current week
     all_rows = []
-    for wk in scoring_weeks:
+    for wk in range(SCORING_START_WEEK, week_num + 1):
+        month_dir = get_report_dir(wk)
         path = f"Reports/{month_dir}/Week_{wk}_Report.md"
         all_rows.extend(read_report_rows(path))
     
