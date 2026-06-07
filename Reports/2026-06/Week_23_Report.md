@@ -21,9 +21,13 @@
 | 6/7/2026 12:17:03 | Kelvin | Run/Jog | 10.35 | 0 | 3 | Strava | [View](https://drive.google.com/open?id=1mG1iB0v1MqZpFwq7q1s7q0HE0bMl-EC2) | Verified |
 | 6/7/2026 17:27:12 | Chun Chieh | Run/Jog | 16.44 | 25,078 | 0 | Strava | [View](https://drive.google.com/open?id=1OVyShTGV0pUV_-gUo9jxz0hZsyLxYi6O) | Verified |
 | 6/7/2026 18:45:45 | Jeremy | Run/Jog | 7.38 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1e4BMFEhWSj6wEcviv3MBYKtrv70LsO3y) | Verified |
+| 6/7/2026 19:14:51 | CRX | Run/Jog | 5.51 | 4,532 | 0 | Strava | [View](https://drive.google.com/open?id=1wZORbRr0a2MOpY9mZ8VAKPq0lbeWlBtI) | Verified |
+| 6/7/2026 19:14:51 | CRX | Run/Jog | 4.42 | 5,470 | 0 | Strava | [View](https://drive.google.com/open?id=1GqYnZowLb_zpDOMFmiVAI-goThfcOhh6) | Verified |
+| 6/7/2026 19:14:51 | CRX | Run/Jog | 4.01 | 3,398 | 0 | Strava | [View](https://drive.google.com/open?id=1dIsrILHjnqfzJaktbKAYviloTh3YfIPH) | Verified |
+| 6/7/2026 19:14:51 | CRX | Run/Jog | 4.75 | 6,624 | 0 | Strava | [View](https://drive.google.com/open?id=1ociP11PUhx7r8uV-ySO9Fcv-1EGbJHuv) | Verified |
 
 ---
-**Total Points Accumulated:** 21
+**Total Points Accumulated:** 23
 
 ## Month-to-Date Cumulative Summary (June 2026 — Through Week 23)
 
@@ -31,7 +35,7 @@
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| CRX | 47,250 | 0.00 | 0.00 | 1 | 0 | 0 | 1 |
+| CRX | 67,274 | 0.00 | 0.00 | 3 | 0 | 0 | 3 |
 | Jeremy | 0 | 54.69 | 0.00 | 0 | 6 | 0 | 6 |
 | Kai Fong | 0 | 17.66 | 0.00 | 0 | 4 | 0 | 4 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
@@ -63,3 +67,4 @@
 - **Kelvin (12:17:03):** OCR extraction: 10.35 km Run (9.89 km/h). Qualifies for Tier 3 (10.0 km). App identified: Strava (Approved).
 - **Chun Chieh (6/7 17:27:12):** Strava: 16.44 km Morning Walk in Tokyo. 25,078 steps. Qualifies for Tier 4 (≥15.0 km). App identified: Strava (Approved).
 - **Jeremy (6/7 18:45:45):** Strava: 7.38 km Afternoon Run (pace 6:14/km = 9.65 km/h). 46:04. App identified: Strava (Approved).
+- **CRX (6/7 19:14:51):** Strava: 4 activities submitted — Afternoon Run 5.51km (4,532 steps), Morning Walk 4.42km (5,470 steps), Evening Run 4.01km (3,398 steps), Walk 4.75km (6,624 steps). Total new steps: 20,024. June cumulative: 67,274 steps. Qualifies for Tier 3 (≥65,000). App identified: Strava (Approved).
