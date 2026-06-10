@@ -74,8 +74,12 @@ Each weekly report begins with a raw activity log table:
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | YYYY-MM-DD HH:MM | Name | Category | 0.00 | 0 | 0 | App Name | [Link] | Verified/Flagged/Approval Required |
 
-### Part 2 — Cumulative Summary Table
-Every weekly report **must** include a cumulative summary section that aggregates all activity **within that week only**. The table **must** list members in the following fixed order:
+### Part 2 — Weekly Cumulative Summary Table
+Every weekly report **must** include a cumulative summary section that aggregates all activity **within that week only** (no carryover from prior weeks). The section header format is:
+
+> `## Week {N} Cumulative Summary ({Month Year})`
+
+The table **must** list members in the following fixed order:
 
 > CRX → Jeremy → Kai Fong → Chee → Surya → Kelvin → Ron → Chun Chieh
 

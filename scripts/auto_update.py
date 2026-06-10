@@ -514,16 +514,11 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
     
     pledges = determine_pledges(week_num)
     
-    # Build cumulative from scoring start week onwards only
+    # Build cumulative from current week only (scores do not carry over between weeks)
     MEMBER_ORDER = ['CRX', 'Jeremy', 'Kai Fong', 'Chee', 'Surya', 'Kelvin', 'Ron', 'Chun Chieh']
     month_dir = get_report_dir(week_num)
-    weeks_in_month = get_month_weeks(week_num)
-    scoring_weeks = [wk for wk in weeks_in_month if wk >= SCORING_START_WEEK]
     
-    all_month_rows = []
-    for wk in scoring_weeks:
-        path = f"Reports/{month_dir}/Week_{wk}_Report.md"
-        all_month_rows.extend(read_report_rows(path))
+    all_month_rows = read_report_rows(report_path)
     
     member_cum = {m: {'steps': 0, 'run_dist': 0.0, 'cycle_dist': 0.0} for m in MEMBER_ORDER}
     
@@ -565,8 +560,8 @@ def update_markdown_report(report_path, week_num, monday, sunday, new_rows_data)
     final_content.append(f"**Total Points Accumulated:** {total_points}\n")
 
     month_name = datetime.datetime.strptime(month_dir, "%Y-%m").strftime("%B %Y")
-    final_content.append(f"## Month-to-Date Cumulative Summary ({month_name} — Through Week {week_num})\n")
-    final_content.append("> **Scoring method:** Cumulative month-to-date total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring.\n")
+    final_content.append(f"## Week {week_num} Cumulative Summary ({month_name})\n")
+    final_content.append("> **Scoring method:** Cumulative weekly total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring.\n")
     final_content.append("| Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |")
     final_content.append("| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
     for name in MEMBER_ORDER:

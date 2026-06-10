@@ -5,7 +5,6 @@
 | Date/Timestamp | Profile | Category | Distance (km) | Steps | Points | App | Image Link | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-06-01 08:14:08 | Kai Fong | Run/Jog | 6.31 | 0 | 0 | Strava App | [View](https://drive.google.com/open?id=10bvwHdo8xnb015s7k52kVtcgYjbVrS4V) | Verified |
-| 2026-06-01 09:09:44 | CRX | Steps | 0.00 | 44,238 | 0 | Healthy 365 | [View](https://drive.google.com/open?id=1typ8zV8VgOQsK7b-gPPC8--hoVQJQ2IU) | Verified |
 | 2026-06-01 11:41:23 | Kelvin | Run/Jog | 10.44 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1roMqbpkjM32IL2l0MVz0fu3MftjdWV3h) | Verified |
 | 2026-06-01 14:34:48 | Jeremy | Run/Jog | 10.97 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1XRKWa7f63so26C6bZpHGJpaLhSAeaNLI) | Verified |
 | 2026-06-02 19:19:37 | Jeremy | Run/Jog | 7.23 | 0 | 0 | Strava | [View](https://drive.google.com/open?id=1Uv3ni9N1UYTWeoT5px8xTrz7mgnJoY-U) | Verified |
@@ -32,9 +31,9 @@
 ---
 **Total Points Accumulated:** 27
 
-## Month-to-Date Cumulative Summary (June 2026 — Through Week 23)
+## Week 23 Cumulative Summary (June 2026)
 
-> **Scoring method:** Cumulative month-to-date total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring.
+> **Scoring method:** Cumulative weekly total per pledged category → tier applied **once** to the total. Non-pledged activities are excluded from scoring.
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -56,7 +55,6 @@
 - **Kelvin (6/1 11:41:23):** Strava: 10.44 km Morning Run (pace 5:58/km = 10.07 km/h). Moving time 1:02:17. Personal record fastest 10K. App identified: Strava (Approved).
 - **Jeremy (6/1 14:34:48):** Strava: 10.97 km Afternoon Run (pace 6:05/km = 9.86 km/h). Personal record fastest 10K. App identified: Strava (Approved).
 - **Jeremy (6/2 19:19:37):** Strava: 7.23 km Evening Run (pace 5:48/km = 10.34 km/h). 2nd fastest 5K. App identified: Strava (Approved).
-- **CRX (6/1 09:09:44):** OCR extraction: 44,238 steps. Below Tier 1 (45,000). Pledge = Steps. App identified: fitness app (Approved).
 - **CRX (6/2 20:32:59):** Strava: 3.52 km Evening Run (pace 5:24/km = 11.11 km/h). 19:00 moving time. Pledge = Steps; run not counted towards scoring. App identified: Strava (Approved).
 - **Kai Fong (18:46:11):** OCR extraction: 5.77 km Run (9.63 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
 - **Jeremy (18:54:32):** OCR extraction: 7.24 km Run (10.53 km/h). Qualifies for Tier 2 (7.0 km). Flagged: within 5% of Tier threshold. App identified: Strava (Approved).
