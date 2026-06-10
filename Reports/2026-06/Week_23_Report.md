@@ -29,7 +29,7 @@
 | 6/8/2026 06:03:23 | CRX | Steps | 0.00 | 99,091 | 0 | Healthy 365 | [View](https://drive.google.com/open?id=1ulr0JK-RAiGplUM4KEgWBOSZXnhFiWx9) | Verified |
 
 ---
-**Total Points Accumulated:** 27
+**Total Points Accumulated:** 26
 
 ## Week 23 Cumulative Summary (June 2026)
 
@@ -37,11 +37,11 @@
 
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| CRX | 143,329 | 0.00 | 0.00 | 6 | 0 | 0 | 6 |
+| CRX | 99,091 | 0.00 | 0.00 | 5 | 0 | 0 | 5 |
 | Jeremy | 0 | 54.69 | 0.00 | 0 | 6 | 0 | 6 |
 | Kai Fong | 0 | 17.66 | 0.00 | 0 | 4 | 0 | 4 |
 | Chee | 52,564 | 0.00 | 0.00 | 1 | 0 | 0 | 1 |
-| Surya | 4,204 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| Surya | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Kelvin | 0 | 41.10 | 0.00 | 0 | 6 | 0 | 6 |
 | Ron | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Chun Chieh | 0 | 22.36 | 0.00 | 0 | 4 | 0 | 4 |
