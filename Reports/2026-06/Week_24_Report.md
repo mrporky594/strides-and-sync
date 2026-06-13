@@ -9,6 +9,7 @@
 | 6/10/2026 20:19:35 | Kai Fong | Run/Jog | 5.57 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1ez4qYm-6GYiQ3KjOX-Vtm9v2VCjFzkz2) | Verified |
 | 6/11/2026 19:07:45 | Jeremy | Run/Jog | 10.09 | 0 | 3 | Unknown | [View](https://drive.google.com/open?id=19L0Ft_xEMtSYVPwmw3_YfgNSNgNssuI1) | Committee Approval Required |
 | 6/11/2026 19:31:48 | Kelvin | Run/Jog | 10.28 | 0 | 3 | Garmin | [View](https://drive.google.com/open?id=1H4ZMSYH2W6iWCZTPv4tEqsU66NWcGYpO) | Flagged |
+| 6/12/2026 19:21:35 | Jeremy | Run/Jog | 7.44 | 0 | 2 | Unknown | [View](https://drive.google.com/open?id=1aEXYq4xrZlbzKEn1QYalHV-Lc5RuQ44X) | Committee Approval Required |
 | 6/12/2026 7:52:55 | Kai Fong | Run/Jog | 5.00 | 0 | 1 | Strava | [View](https://drive.google.com/open?id=1pRTZijy7lpEWJ-yayeI-lkLkPDNnntjZ) | Verified |
 | 6/12/2026 8:57:56 | Jeremy | Run/Jog | 3.65 | 0 | 1 | Unknown | [View](https://drive.google.com/open?id=1brrL-4zJmZ5U7-ecF63wFPHmRxZ5Ocev) | Committee Approval Required |
 | 6/12/2026 9:52:56 | Kelvin | Run/Jog | 10.22 | 0 | 3 | Unknown | [View](https://drive.google.com/open?id=1qeIWTdDD4-QkVf8oyzSvoz1GgYxseRiq) | Committee Approval Required |
@@ -19,7 +20,7 @@
 | 6/9/2026 9:34:20 | Kelvin | Run/Jog | 10.30 | 0 | 3 | Garmin | [View](https://drive.google.com/open?id=1PwKjfIJHmzAES-S2m2eUiDxcT51MAn9z) | Flagged |
 
 ---
-**Total Points Accumulated:** 16
+**Total Points Accumulated:** 17
 
 ## Week 24 Cumulative Summary (June 2026)
 
@@ -28,7 +29,7 @@
 | Member | Total Steps | Total Distance Jogging/Running (km) | Total Distance Cycling (km) | Steps Points | Run/Jog Points | Cycling Points | Total Points |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | CRX | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
-| Jeremy | 0 | 24.43 | 0.00 | 0 | 4 | 0 | 4 |
+| Jeremy | 0 | 31.87 | 0.00 | 0 | 5 | 0 | 5 |
 | Kai Fong | 0 | 10.57 | 0.00 | 0 | 3 | 0 | 3 |
 | Chee | 0 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
 | Surya | 4,204 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
@@ -54,3 +55,4 @@
 - **Kai Fong (7:52:55):** OCR extraction: 5.00 km Run (9.18 km/h). Qualifies for Tier 1 (3.5 km). App identified: Strava (Approved).
 - **Jeremy (8:57:56):** OCR extraction: 3.65 km Run (10.75 km/h). Qualifies for Tier 1 (3.5 km). Flagged: unapproved tracking application. App identified: Unknown (Unapproved).
 - **Kelvin (9:52:56):** OCR extraction: 10.22 km Run (9.84 km/h). Qualifies for Tier 3 (10.0 km). Flagged: unapproved tracking application. App identified: Unknown (Unapproved).
+- **Jeremy (19:21:35):** OCR extraction: 7.44 km Run (11.36 km/h). Qualifies for Tier 2 (7.0 km). Flagged: unapproved tracking application. App identified: Unknown (Unapproved).
